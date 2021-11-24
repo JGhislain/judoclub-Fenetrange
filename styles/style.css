@@ -1,0 +1,35 @@
+:root {
+    --primaire-bg-color: #FFF;
+    --secondaire-bg-color: #181818;
+    --tertiaire-bg-color:  #ED2527;
+    --font-color: #FFF;
+}
+
+/* utilisation des variables
+element {
+background-color: var(--primaire-bg-color);
+}  */
+
+html {
+    box-sizing: border-box;
+    margin: 0 2%;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--tertiaire-bg-color);
+    border: 8px solid #181818;
+    border-radius: 20px;
+}
+.logo-titre {
+    height: 35vh;
+    width: 65%;
+    object-fit: fill;
+    padding-top: 30px;
+}
+h1 {
+    display: none;
+    color: var(--font-color);
+    font-size: 2em;
+}
