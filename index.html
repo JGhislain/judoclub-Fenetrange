@@ -7,44 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="assets/Fontawesome/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <title>Judo Club de Fénétrange</title>
 </head>
 
 <body>
     <header>
-        <img class="logo-titre" src="assets/img/accueil/banderole.jpg" alt="Judo Club Fénétrange">
-        <h1>JUDO CLUB DE FÉNÉTRANGE</h1>
+        <h1 id="titre-page" class="encart-titre">
+            <img class="logo-titre" src="assets/img/accueil/banderole.jpg" alt="Judo Club Fénétrange">
+        </h1>
+        <nav id="naviguation-pages" class="nav">
+            <div class="nav-bar">
+                <a href="#Accueil" class="naviguation">Accueil</a>
+                <a href="#Activités-Tarifs" class="naviguation">Activités & Tarifs</a>
+                <a href="#Agenda" class="naviguation">Agenda</a>
+                <a href="#Events-à-venir" class="naviguation">Événements à venir</a>
+                <a href="#Pages-Des-Enfants" class="naviguation">Pages des enfants</a>
+                <a href="#Medias" class="naviguation">Médias</a>
+                <a href="#Contact" class="naviguation">Contact</a>
+            </div>
+        </nav>
     </header>
 
-    <nav>
-        <div id="nav-bar">
-            <a href="#Accueil" class="naviguation">Accueil</a>
-            <a href="#Activités-Tarifs" class="naviguation">Activités & Tarifs</a>
-            <a href="#Agenda" class="naviguation">Agenda</a>
-            <a href="#Events-à-venir" class="naviguation">Événements à venir</a>
-            <a href="#Pages-Des-Enfants" class="naviguation">Pages des enfants</a>
-            <a href="#Medias" class="naviguation">Médias</a>
-            <a href="#Contact" class="naviguation">Contact</a>
-        </div>
-        <div id="search">Recherche</div>
-    </nav>
-
     <main>
-        <section>
-            <div id="last-actu">
-                <h2>Saison 2021 / 2022 : MATINEE D'INSCRIPTION LE SAMEDI 4 SEPTEMBRE de 9h à 12h pour toutes les
-                    activités</h2>
-                <h3>REPRISE DES ENTRAÎNEMENTS JUDO LE MARDI 7 SEPTEMBRE 2021.</h3>
-                <p>- Le mardi et le vendredi : de 18h à 19h15 pour les enfants compétiteurs.
-                    - Le mercredi de 17h à 18h pour les plus petits (nés en 2014, 2015, 2016).
-                    - Le mardi et le vendredi de 19h30 à 21h pour les ados et les adultes.</p>
+        <section id="last-actu">
+            <h2>Saison 2021 / 2022 : MATINEE D'INSCRIPTION LE SAMEDI 4 SEPTEMBRE de 9h à 12h pour toutes les
+                activités
+            </h2>
+
+            <article>
+                <h3>
+                    REPRISE DES ENTRAÎNEMENTS JUDO LE MARDI 7 SEPTEMBRE 2021.
+                </h3>
+                <ul> 
+                    <li>
+                        Le mardi et le vendredi : de 18h à 19h15 pour les enfants compétiteurs.
+                    </li>
+                    <li>
+                        Le mercredi de 17h à 18h pour les plus petits (nés en 2014, 2015, 2016).
+                    </li>
+                    <li>
+                        Le mardi et le vendredi de 19h30 à 21h pour les ados et les adultes.
+                    </li>
+                </ul>
+            </article>
+
+            <article>
                 <h3>REPRISE DU CROSS TRAINING LE JEUDI 9 SEPTEMBRE</h3>
                 <p>Tous les jeudis de 18h15 à 19h15 et de 19h15 à 20h15</p>
+            </article>
+
+            <article>
                 <h3>REPRISE DE L'ACTIVITE SENIORS LE LUNDI 6 SEPTEMBRE</h3>
                 <p>Tous les lundis de 17h30 à 18h30</p>
+            </article>
+
+            <article>
                 <h3>REPRISE DE L'ACTIVITE SENIORS LE LUNDI 6 SEPTEMBRE</h3>
                 <p>Tous les mercredis de 10h30 à 11h15</p>
+            </article>
+
+            <article>
                 <div class="message-important">
                     Un protocole sanitaire correspondra aux normes sanitaires de la fédération.
                     Il devra être appliqué par tous les licenciés. Il sera susceptible d'évoluer selon la situation au
@@ -55,6 +78,9 @@
                     L'accès au dojo ne sera pas autorisé aux adultes non munis de leur pass sanitaire à jour.
                     Le masque n'est pas obligatoire sur le lieu de pratique
                 </div>
+            </article>
+
+            <article>
                 <div id="mot-président">
                     <h2>Mot du Président</h2>
                     <p>Bonjour à tous.<br>
@@ -68,7 +94,7 @@
                         Le président<br><br>
                         Christian BOHN</p>
                 </div>
-            </div>
+            </article>
         </section>
     </main>
 </body>

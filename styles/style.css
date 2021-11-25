@@ -1,8 +1,8 @@
 :root {
-    --primaire-bg-color: #FFF;
+    --primaire-bg-color: #F9F9F9;
     --secondaire-bg-color: #181818;
     --tertiaire-bg-color:  #ED2527;
-    --font-color: #FFF;
+    --font-color: #000;
 }
 
 /* utilisation des variables
@@ -12,24 +12,49 @@ background-color: var(--primaire-bg-color);
 
 html {
     box-sizing: border-box;
-    margin: 0 2%;
+    background-color: var(--primaire-bg-color);
+    font-family: 'Rubik', sans-serif;
 }
 header {
     display: flex;
     flex-direction: column;
+    margin: 1% 3%;
+}
+.encart-titre {
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     background-color: var(--tertiaire-bg-color);
-    border: 8px solid #181818;
-    border-radius: 20px;
+    border: 5px solid #181818;
+    border-radius: 30px;
 }
 .logo-titre {
-    height: 35vh;
-    width: 65%;
+    height: 40vh;
+    width: 60%;
     object-fit: fill;
-    padding-top: 30px;
+    padding-top: 50px;
+    border-radius: 100px;
 }
-h1 {
-    display: none;
-    color: var(--font-color);
-    font-size: 2em;
+.nav {
+    padding-top: 20px;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.naviguation {
+    text-decoration: none;
+    color: var(--tertiaire-bg-color);
+    font-size: 1.4em;
+    padding: 1vw;
+    border-radius: 20px;
+}
+.naviguation:hover {
+    color: #FFF;
+    background-color: var(--tertiaire-bg-color);
+}
+main {
+    margin: 0 8%;
 }
