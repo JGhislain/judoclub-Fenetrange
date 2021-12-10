@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site du judo club de Fénétrange. Activités du judo-club.">
+    <meta name="keywords" content="judo, judogi, judoka, judokas, judokatte, judokattes, ceinture, ceintures, sports, sport, lorraine, moselle, fénétrange">
+    <link rel="shortcut icon" href="../assets/img/ceintures/Judo_red_belt.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/contact.css"/>
+    <link rel="stylesheet" href="../assets/Fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <title>Judo-Club Fénétrange</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="cadre-titre">
+            <h1 class="titre">JUDO CLUB DE FÉNÉTRANGE</h1>
+        </div>
+        <nav>
+            <a href="../index.html" class="naviguation">Activités</a>
+            <a href="../html/membres.html" class="naviguation">Équipes & Membres</a>
+            <a href="../html/agenda.html" class="naviguation">Agenda</a>
+            <a href="../html/actualites.html" class="naviguation">Actualités</a>
+            <a href="../html/resultats.html" class="naviguation">Résultats</a>
+            <a href="../html/reglements.html" class="naviguation">Réglements</a>
+            <a href="../html/medias.html" class="naviguation">Médias</a>
+            <a href="" class="naviguation page-active">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="section-reglement">
+            <h2 class="titre-media">CONTACTER LE JUDO-CLUB</h2>
+                <div class="content">
+                    <div class="modal-body">
+                        <p class="contact-me">FORMULAIRE DE CONTACT</p>
+                    <form name="contact" id="formulaire" action="photographe.html" method="post">
+                        <div class="formData">
+                            <label for="first">Prénom</label><br>
+                            <input class="text-control" type="text" id="first" name="first" placeholder="Votre prénom" aria-required='true'/><br>
+                            <span id="first-validation"></span>
+                        </div>
+                        <div class="formData">
+                            <label for="last">Nom</label><br>
+                            <input class="text-control" type="text" id="last" name="last" placeholder="Votre nom" aria-required='true'/><br>
+                            <span id="last-validation"></span>
+                        </div>
+                        <div class="formData">
+                            <label for="email">Email</label><br>
+                            <input class="text-control" type="email" id="email" name="email" placeholder="Votre Email" aria-required='true'/><br>
+                            <span id="email-validation"></span>
+                        </div>
+                        <div class="formData">
+                            <label for="message">Votre message</label><br>
+                            <textarea class="text-control" type="textarea" id="message" name="message" placeholder="Saisissez votre message" aria-required='true'></textarea><br>
+                            <span id="message-validation"></span>
+                        </div>
+                        <div class="submit">
+                            <input class="btn-submit" type="submit" id="btn-submit" value="Envoyer"/><br>
+                            <span id="error-validation"></span>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+    </main>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

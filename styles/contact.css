@@ -66,63 +66,106 @@ nav {
 body {
     margin-bottom: 5vh;
 }
-.section-activite {
-    padding-bottom: 4em;
-}
-.titre-activite {
+.titre-media {
     color: var(--tertiaire-color);
     margin: 6vh 2vw;
     font-size: 2em;
 }
-.activites {
+.content {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    margin: 5% auto;
+    width: 100%;
+    max-width: 500px;
+    background: var(--tertiaire-color);
+    transform: skew(-1deg, 0deg);
+    border-radius: 70px 0px 70px 0px;
+    overflow: hidden;
+    color: #000;
+    padding: 1em 2em 1em 1em;
 }
-.article {
-    width: 35%;
-    background-color: var(--tertiaire-color);
-    border-radius: 25px;
-    padding: 2em 1.5em;
+.modal-body {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    transform: skew(-2deg, 0deg);
-    border-radius: 70px 0px 70px 0px;
+    padding: 0 5%;
 }
-.lien-equipe {
+.contact-me {
+    font-size: 2.2em;
+    padding-bottom: 1em;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--second-color);
     align-self: center;
 }
-.article:hover {
-    box-shadow: inset 0em 0em 3em 0em var(--red-color);
-    opacity: 0.9;
+.modal__close {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
 }
-.img-activite {
+.modal__close:focus {
+    border: 2px solid var(--border-acces-color);
+}
+.modal-close {
+    color: #FFF;
+    font-size: 3em;
+}
+.modal-close:hover {
+    color: var(--primaire-color);
+}
+.nom-contact {
+    font-size: 2.5em;
+    margin: 0 0 2vh 0;
+}
+label {
+    font-size: 1.5em;
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 0.3vh;
+}
+input {
+    padding: 8px;
+    border: 0.8px solid #ccc;
+    outline: none;
+}
+.text-control {
+    margin: 0;
+    padding: 8px;
     width: 100%;
-    object-fit: cover;
-    height: 25vh;
-    border-radius: 25px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    height: 48px;
 }
-h3 {
-    font-size: 1.6em;
+.text-control:focus {
+    border: 2px solid var(--border-acces-color);
+}
+textarea {
+    padding: 10px;
+    max-width: 100%;
+    min-height: 170px;
+    max-height: 250px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+textarea:focus {
+    border: 2px solid var(--border-acces-color);
+}
+.btn-submit{
+    background: var(--primaire-color);
+    border-radius: 7px;
+    font-size: 1.1em;
+    padding: 15px 30px;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    margin-top: 2vh;
+}
+.btn-submit:hover {
+    background-color: #FFF;
     color: var(--primaire-color);
     font-weight: bold;
-    text-align: center;
 }
-.description-activite {
-    text-align: justify;
-    font-size: 1.1em;
-}
-.heure-activite {
-    color: var(--primaire-color);
-    font-weight: bold;
-    font-size: 1.2em;
-}
-.prix {
-    font-size: 1.1em;
-}
-strong {
-    color: var(--primaire-color);
-}
-.detail-prix {
-    font-size: 1em;
+.btn-submit:focus {
+    border: 2px solid var(--border-acces-color);
 }
