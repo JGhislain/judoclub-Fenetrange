@@ -78,7 +78,6 @@ body {
     width: 100%;
     max-width: 500px;
     background: var(--tertiaire-color);
-    transform: skew(-1deg, 0deg);
     border-radius: 70px 0px 70px 0px;
     overflow: hidden;
     color: #000;
@@ -96,7 +95,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: space-between;
-    color: var(--second-color);
+    color: var(--primaire-color);
     align-self: center;
 }
 .modal__close {
@@ -162,7 +161,7 @@ textarea:focus {
     margin-top: 2vh;
 }
 .btn-submit:hover {
-    background-color: #FFF;
+    background-color: var(--red-color);
     color: var(--primaire-color);
     font-weight: bold;
 }

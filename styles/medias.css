@@ -84,25 +84,27 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 1em;
-    transform: skew(-1deg, 0deg);
     border-radius: 70px 0px 70px 0px;
     padding: 2em;
     background-color: var(--tertiaire-color);
 }
 .liste img {
-    height: 250px;
-    width: 250px;
-    object-fit: contain;
+    height: 350px;
+    width: 350px;
+    border-radius: 70px 0px 70px 0px;
+    object-fit: cover;
     margin: 0.5em 0.5em;
 }
 .media:hover {
     box-shadow: inset 0em 0em 5em 0em var(--red-color);
     opacity: 0.9;
-    border-radius: 10%;
+    border-radius: 70px 0px 70px 0px;
 }
 iframe {
-    margin: auto;
-    width: 40%;
+    border-radius: 70px 0px 70px 0px;
+    margin: 1vh auto;
+    width: 350px;
+    height: 350px;
 }
 .lightbox.show {
     display: initial;
