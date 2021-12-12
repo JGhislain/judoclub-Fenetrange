@@ -60,8 +60,10 @@ nav {
 .naviguation:hover {
     background-color: var(--red-color);
     color: var(--font-color);
+    border: 2px solid var(--tertiaire-color);
 }
 .page-active {
+    border: 2px solid var(--tertiaire-color);
     background-color: var(--red-color);
     color: var(--font-color);
 }
