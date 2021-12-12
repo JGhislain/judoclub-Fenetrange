@@ -16,19 +16,21 @@ html {
     margin: 0 3%;
 }
 header {
-    background: url(../assets/img/accueil/banderole.jpg) round transparent;
+    background: url(../assets/img/accueil/banderole.jpg) no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
     transform: skew(-10deg, 0deg);
     border-radius: 70px 0px 70px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 35vh;
+    height: 38vh;
 }
 .cadre-titre {
     display: flex;
     align-items: center;
     width: 100%;
-    margin: 14vh 0;
+    margin: 15.5vh 0;
 }
 .titre {
     height: 1px;
