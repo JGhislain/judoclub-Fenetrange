@@ -104,8 +104,12 @@ h3 {
     margin: auto;
     padding: 0 0.5vw;
 }
+.liste-reprise {
+    padding: 0;
+}
 .puce-reprise {
     list-style-type: disclosure-closed;
+    list-style-position: inside;
     padding: 1vh 2vw;
     text-align: justify;
     font-size: 1.1em;
