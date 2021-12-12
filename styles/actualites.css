@@ -70,11 +70,63 @@ nav {
 body {
     margin-bottom: 5vh;
 }
-.section-activite {
+.section-actualites {
     padding-bottom: 4em;
 }
 .titre-activite {
     color: var(--tertiaire-color);
     margin: 6vh 2vw;
     font-size: 2em;
+}
+.actu-general {
+    display: flex;
+}
+.actu-club {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article-actualites {
+    margin: 2vh auto;
+    width: 70%;
+    align-items: center;
+    background-color: var(--tertiaire-color);
+    padding: 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 70px 0px 70px 0px;
+}
+h3 {
+    font-size: 1.6em;
+    color: var(--primaire-color);
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 0 0.5vw;
+}
+.puce-reprise {
+    list-style-type: disclosure-closed;
+    padding: 1vh 2vw;
+    text-align: justify;
+    font-size: 1.1em;
+}
+.contenu-actu {
+    padding: 1vh 2vw;
+    text-align: justify;
+    font-size: 1.1em;
+}
+.titre-liste {
+    margin-left: 2vw;
+    font-size: 1.3em;
+    color: var(--primaire-color);
+    font-weight: bold;
+}
+.article-president {
+    margin: 2vh auto;
+    align-items: center;
+    background-color: var(--tertiaire-color);
+    padding: 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 70px 0px 70px 0px;
 }
