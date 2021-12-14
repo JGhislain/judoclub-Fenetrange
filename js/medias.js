@@ -98,3 +98,39 @@ let nextLightbox = function() {
 
 // ---- On active la fonction d'écoute du click sur les photos ---------------------------
 openLightbox();
+
+//--------------------------------------------------------------------------------------//
+//                    Ajout du nombre de like si click sur un coeur                     //
+//--------------------------------------------------------------------------------------//
+
+let nombreLikes = function() {
+    let iconesCoeur = document.querySelectorAll('.coeur')
+    for (let i = 0; i < iconesCoeur.length; i++) {
+        const icone = iconesCoeur[i];
+        //On écoute le click des icones de coeurs
+        icone.addEventListener('click', function(e) {
+            e.preventDefault()
+            //Si on click sur un coeur on ajoute la class 'bold'
+            //et on incrémente +1 au compteur de likes
+            if (!icone.classList.contains('bold')) {
+                icone.classList.add('bold')
+                console.log((icone.nextSibling.data))
+                let nbLikes = (icone.nextSibling.data).match(/\d/g).join('')
+                console.log(parseFloat(nbLikes))
+                let likes = parseFloat(nbLikes)
+                icone.nextSibling.data = likes+1  + " kiffs"
+            }
+            //Sinon on retire la classe 'bold'
+            else {
+                icone.classList.remove('bold')
+                console.log((icone.nextSibling.data))
+                let nbLikes = (icone.nextSibling.data).match(/\d/g).join('')
+                console.log(parseFloat(nbLikes))
+                let likes = parseFloat(nbLikes)
+                icone.nextSibling.data = likes-1 + " kiffs"
+            }
+        })
+    }
+}
+
+nombreLikes();
