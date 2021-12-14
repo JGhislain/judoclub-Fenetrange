@@ -45,11 +45,12 @@ header {
     justify-content: center;
     font-family: 'Caesar Dressing', cursive;
     width: 50%;
-    height: 26vh;
-    font-size: 4em;
+    height: 28vh;
+    font-size: 4.5em;
     letter-spacing: 0.3em;
     padding-bottom: 0vh;
     text-align: center;
+    margin: 0;
 }
 .logo-ffjda {
     margin-bottom: 6vh;
