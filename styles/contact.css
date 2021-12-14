@@ -16,7 +16,7 @@ html {
     margin: 0 3%;
 }
 header {
-    background: url(../assets/img/accueil/banderole.jpg) no-repeat;
+    background: url(../assets/img/accueil/banderole-vide.jpg) no-repeat;
     background-size: cover;
     background-size: 100% 100%;
     transform: skew(-10deg, 0deg);
@@ -24,21 +24,37 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50vh;
+    height: 40vh;
 }
 .cadre-titre {
+    transform: skew(10deg, 0deg);
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin: 21vh 0;
+    height: 32.5vh;
+}
+.logo-jcf {
+    margin-bottom: 6vh;
+    margin-left: 3vw;
+    height: 70%;
 }
 .titre {
-    height: 1px;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    top: -10000px;
-    width: 1px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-family: 'Caesar Dressing', cursive;
+    width: 50%;
+    height: 26vh;
+    font-size: 4em;
+    letter-spacing: 0.3em;
+    padding-bottom: 0vh;
+    text-align: center;
+}
+.logo-ffjda {
+    margin-bottom: 6vh;
+    margin-right: 3vw;
+    height: 60%;
 }
 nav {
     margin: 2vh 0;
