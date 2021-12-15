@@ -118,7 +118,7 @@ let nombreLikes = function() {
                 let nbLikes = (icone.nextSibling.data).match(/\d/g).join('')
                 console.log(parseFloat(nbLikes))
                 let likes = parseFloat(nbLikes)
-                icone.nextSibling.data = likes+1  + " kiffs"
+                icone.nextSibling.data = likes+1  + " j'aime"
             }
             //Sinon on retire la classe 'bold'
             else {
@@ -127,7 +127,7 @@ let nombreLikes = function() {
                 let nbLikes = (icone.nextSibling.data).match(/\d/g).join('')
                 console.log(parseFloat(nbLikes))
                 let likes = parseFloat(nbLikes)
-                icone.nextSibling.data = likes-1 + " kiffs"
+                icone.nextSibling.data = likes-1 + " j'aime"
             }
         })
     }

@@ -38,6 +38,7 @@ header {
     margin-bottom: 6vh;
     margin-left: 3vw;
     height: 70%;
+    width: 15%;
 }
 .titre {
     display: flex;
@@ -45,8 +46,7 @@ header {
     justify-content: center;
     font-family: 'Caesar Dressing', cursive;
     width: 50%;
-    height: 28vh;
-    font-size: 4.5em;
+    font-size: 8vh;
     letter-spacing: 0.3em;
     padding-bottom: 0vh;
     text-align: center;
@@ -56,6 +56,7 @@ header {
     margin-bottom: 6vh;
     margin-right: 3vw;
     height: 60%;
+    width: 10%;
 }
 nav {
     margin: 2vh 0;
@@ -64,7 +65,7 @@ nav {
     justify-content: space-between;
 }
 .naviguation {
-    font-size: 1.2em;
+    font-size: 1.5vw;
     text-decoration: none;
     color: var(--red-color);
     font-weight: bold;
@@ -145,7 +146,7 @@ body {
 }
 .coeur {
     color: var(--tertiaire-color);
-    padding-right: 4.5em;
+    padding-right: 3.8em;
 }
 .coeur:hover {
     color: darkred;
