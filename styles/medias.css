@@ -147,6 +147,7 @@ body {
 .coeur {
     color: var(--tertiaire-color);
     padding-right: 3.8em;
+    cursor: pointer;
 }
 .coeur:hover {
     color: darkred;
