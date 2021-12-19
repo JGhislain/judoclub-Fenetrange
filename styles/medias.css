@@ -115,14 +115,25 @@ body {
 }
 .titre-media {
     color: var(--tertiaire-color);
-    margin: 6vh 2vw;
+    margin: 1vh 2vw 4vh 2vw;
     font-size: 2em;
+}
+.retour-gallerie {
+    margin: 0vh 2vw 0vh 2vw;
+    font-size: 4em;
+    color: var(--red-color);
+}
+.retour-gallerie:hover {
+    color: var(--primaire-color);
+}
+.icone-retour {
+    margin-top: 3vh;
 }
 .liste {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 1em;
+    margin: 1em;
     border-radius: 70px 0px 70px 0px;
     padding: 2em;
     background-color: var(--tertiaire-color);

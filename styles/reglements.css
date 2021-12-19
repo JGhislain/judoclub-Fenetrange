@@ -140,8 +140,9 @@ body {
     justify-content: center;
     text-decoration: none;
     margin: 2vh 2vw;
-    width: 40%;
+    width: 25%;
     height: 350px;
+    min-width: 280px;
 }
 .reglement:hover {
     box-shadow: inset 0em 0em 5em 0em var(--red-color);
