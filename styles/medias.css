@@ -260,8 +260,7 @@ body {
 }
 .lightbox-video {
     display: none;
-    max-width: 100%;
-    height: auto;
+    min-height: inherit;
     animation: lightboxIn 500ms;
 }
 .lightbox-link {
