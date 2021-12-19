@@ -4,7 +4,9 @@ const preview = document.querySelector(".lightbox__preview")
 const next = document.querySelector(".lightbox__next")
 const imgListe = document.getElementById('liste')
 const links = document.querySelectorAll(".liste a")
-const image = lightbox.querySelector(".lightbox__container img")
+const imageContainer = lightbox.querySelector(".lightbox__container img")
+const videoContainer = lightbox.querySelector(".lightbox__container video")
+const aLinkContainer = lightbox.querySelector(".lightbox-link")
 
 //--------------------------------------------------------------------------------------//
 //                       On ajoute l'écouteur clic sur les liens                        //
@@ -16,85 +18,202 @@ let openLightbox = function() {
         const link = links[i];
         link.addEventListener("click", function(e) {
             e.preventDefault()
-            // ---- On ajoute l'image du lien cliqué dans la lightbox --------------------------------
-            image.src = this.href
-            //definir index 
-            let img = this.querySelector('img');
-            index = img.dataset.index
-            console.log(this.querySelector('img'));
-            console.log(img);
-            console.log(index);
-
-            // ---- on affiche la lightbox -----------------------------------------------------------
-            lightbox.classList.add("show")
+            //Si on clic sur une photo on ajoute l'image 
+            //du lien de la photo et on l'insère dans la balise image
+            if (link.classList.contains('photo') == true) {
+                imageContainer.src = this.href
+                let img = this.querySelector('img')
+                mediaIndex = img.dataset.index
+                lightbox.classList.add('show')
+                imageContainer.style.display = "initial"
+            }
+            else {
+                videoContainer.src = this.href
+                let vid = this.querySelector('video')
+                mediaIndex = vid.dataset.index
+                lightbox.classList.add('show')
+                videoContainer.classList.add('show')
+            }
         });
     }
-    // ---- On active le bouton close --------------------------------------------------------
-    closeLightbox()
-    // ---- On active le bouton preview ------------------------------------------------------
-    previewLightbox()
-    // ---- On active le bouton next ------------------------------------------------------
-    nextLightbox()
-};
+}
 
+//--------------------------------------------------------------------------------------//
+//                         Fonction de fermeture de la lightbox                         //
+//--------------------------------------------------------------------------------------//
 
-// ---- On ferme la lightbox lorsque qu'on click sur le bouton close ---------------------
-let closeLightbox = function() {
-    close.addEventListener("click", function(){
-        // ---- On retire la fenêtre lightbox ----------------------------------------------------
-        lightbox.classList.remove("show")
-    })
-};
+function closeLightbox() {
+    //On retire la classe show de la lightbox
+    imageContainer.style.display = "none"
+    videoContainer.classList.remove('show')
+    lightbox.classList.remove("show")
+    if (document.querySelector('.player-youtube').childElementCount === 0) {
+        document.querySelector('.player-youtube').appendChild(iframeMedia[0])
+        aLinkContainer.classList.remove('yt-show')
+        document.querySelector('.player-youtube').classList.add('yt-classic')
+        document.querySelector('.player-youtube iframe').height = 350
+        document.querySelector('.player-youtube iframe').width = 350
+    }
+}
+
+close.addEventListener("click", closeLightbox)
+window.addEventListener('keyup', (e) => {
+    if (e.keyCode === 27) {
+        closeLightbox()
+    }
+})
 
 //--------------------------------------------------------------------------------------//
 //                       Fonction de recherche des sources médias                       //
 //--------------------------------------------------------------------------------------//
 
+let getMediaUrl = function(mediaIndex) {
+    mediaCible = links[mediaIndex];
+    if (mediaCible.classList.contains("photo")) {
+        return mediaCible.querySelector('img').src
+    }
+    if (mediaCible.classList.contains("video")) {
+        return mediaCible.querySelector('video').src
+    }
+    else {
+        return mediaCible.querySelector('iframe')
+    }
+};
 
-let getImageUrl = function(index) {
-    allMedia = document.querySelectorAll(".media")
-    let media = allMedia[index];
-    console.log(index)
-    return media.querySelector("img").src;
+//--------------------------------------------------------------------------------------//
+//                      Fonction de media précédent de la lightbox                      //
+//--------------------------------------------------------------------------------------//
+
+function previewLightbox() {
+    //On initialise mediaIndex
+    mediaIndex -= 1
+    mediaTotal = document.querySelectorAll('.media')
+    //Si mediaIndex est inférieur à 0 alors revenir à la dernière photo
+    if (mediaIndex < 0) {
+        mediaIndex = mediaTotal.length - 1
+    }
+    //Appel de la fonction de récupération de l'Url du média à venir
+    let mediaUrl = getMediaUrl(mediaIndex)
+    //Si le media est une photo on affiche la photo
+    if (mediaCible.classList.contains("photo")) {
+        imageContainer.src = mediaUrl
+        //Si le media précédent était une vidéo on remplace l affichage des balises
+        if (imageContainer.style.display = "none") {
+            aLinkContainer.style.display = 'none'
+            videoContainer.classList.remove('show')
+            imageContainer.style.display = 'initial'
+            if (document.querySelector('.player-youtube').childElementCount === 0) {
+                document.querySelector('.player-youtube').appendChild(iframeMedia[0])
+                aLinkContainer.classList.remove('yt-show')
+                document.querySelector('.player-youtube').classList.add('yt-classic')
+                document.querySelector('.player-youtube iframe').height = 350
+                document.querySelector('.player-youtube iframe').width = 350
+            }
+        }
+    }
+    //Si le media est une vidéo on affiche la vidéo
+    else if (mediaCible.classList.contains('video')) {
+        aLinkContainer.style.display = 'none'
+        imageContainer.style.display = "none"
+        videoContainer.classList.add('show')
+        videoContainer.src = mediaUrl
+        if (document.querySelector('.player-youtube').childElementCount === 0) {
+            document.querySelector('.player-youtube').appendChild(iframeMedia[0])
+            aLinkContainer.classList.remove('yt-show')
+            document.querySelector('.player-youtube').classList.add('yt-classic')
+            document.querySelector('.player-youtube iframe').height = 350
+            document.querySelector('.player-youtube iframe').width = 350
+        }
+    }
+    else if (mediaCible.classList.contains('player-youtube')) {
+        imageContainer.style.display = 'none'
+        videoContainer.classList.remove('show')
+        aLinkContainer.innerHTML = ""
+        aLinkContainer.appendChild(mediaUrl);
+        aLinkContainer.style.display = 'initial'
+        iframeMedia = Array.from(document.querySelectorAll('iframe'))
+        aLinkContainer.classList.add('yt-show')
+        document.querySelector('iframe').classList.remove('yt-classic')
+        document.querySelector('iframe').height = 720
+        document.querySelector('iframe').width = 1300
+    }
 }
 
-// ---- On va à la photo précédente lorsqu'on click sur le bouton preview ----------------
-let previewLightbox = function() {
-    preview.addEventListener("click", function(){
-        // ---- On affiche l'image précédente ----------------------------------------------------
-        index -= 1
-        imgTotal = document.querySelectorAll('.liste img')
-        // si index < 0 
-        if (index < 0) {
-            // index = nombre image total
-            index = imgTotal.length - 1
-        }
-        //Afficher l image précédente dans la lightbox
-            //Cibler l'img du lightbox container
-        let imgUrl = getImageUrl(index)
-            //Changer la source de mon image par la source de mon image précédente
-        image.src = imgUrl
-    })
-};
+preview.addEventListener('click', previewLightbox)
+window.addEventListener('keyup', (e) => {
+    if (e.keyCode === 37) {
+        previewLightbox()
+    }
+})
 
+//--------------------------------------------------------------------------------------//
+//                       Fonction de média suivant de la lightbox                       //
+//--------------------------------------------------------------------------------------//
 
-// ---- On va à la photo suivante lorsqu'on click sur le bouton next ---------------------
-let nextLightbox = function() {
-    next.addEventListener("click", function(){
-        // ---- On affiche l'image suivante ----------------------------------------------------
-        index ++
-        imgTotal = document.querySelectorAll('.liste img')
-        console.log(index)
-        console.log(imgTotal)
-        // si index > nombreTotal d'image
-        if (index == imgTotal.length) {
-            // index = 0
-            index = 0
+    let iframeMedia;
+
+    function nextLightbox() {
+        //On initialise mediaIndex
+        mediaIndex ++
+        mediaTotal = document.querySelectorAll('.media')
+        console.log(document.querySelector('.player-youtube').childElementCount)
+        //Si mediaIndex est supérieur à mediaTotal.length alors revenir à la premiere photo
+        if (mediaIndex === mediaTotal.length) {
+            mediaIndex = 0
         }
-        let imgSrc = getImageUrl(index)
-        image.src = imgSrc
+        //Appel de la fonction de récupération de l'Url du média à venir
+        let mediaUrl = getMediaUrl(mediaIndex)
+        //Si le media est une photo on affiche la photo
+        if (mediaCible.classList.contains("photo")) {
+            imageContainer.src = mediaUrl
+            //Si le media précédent était une vidéo on remplace l affichage des balises
+            if (imageContainer.style.display = "none") {
+                aLinkContainer.style.display = 'none'
+                videoContainer.classList.remove('show')
+                imageContainer.style.display = 'initial'
+                if (document.querySelector('.player-youtube').childElementCount === 0) {
+                    document.querySelector('.player-youtube').appendChild(iframeMedia[0])
+                    aLinkContainer.classList.remove('yt-show')
+                    document.querySelector('.player-youtube').classList.add('yt-classic')
+                    document.querySelector('.player-youtube iframe').height = 350
+                    document.querySelector('.player-youtube iframe').width = 350
+                }
+            }
+        }
+        //Si le media est une vidéo on affiche la vidéo
+        else if (mediaCible.classList.contains('video')) {
+            aLinkContainer.style.display = 'none'
+            imageContainer.style.display = "none"
+            videoContainer.classList.add('show')
+            videoContainer.src = mediaUrl
+            if (document.querySelector('.player-youtube').childElementCount === 0) {
+                document.querySelector('.player-youtube').appendChild(iframeMedia[0])
+                aLinkContainer.classList.remove('yt-show')
+                document.querySelector('.player-youtube').classList.add('yt-classic')
+                document.querySelector('.player-youtube iframe').height = 350
+                document.querySelector('.player-youtube iframe').width = 350
+            }
+        }
+        else if (mediaCible.classList.contains('player-youtube')) {
+            imageContainer.style.display = 'none'
+            videoContainer.classList.remove('show')
+            aLinkContainer.innerHTML = ""
+            aLinkContainer.appendChild(mediaUrl);
+            aLinkContainer.style.display = 'initial'
+            iframeMedia = Array.from(document.querySelectorAll('iframe'))
+            aLinkContainer.classList.add('yt-show')
+            document.querySelector('iframe').classList.remove('yt-classic')
+            document.querySelector('iframe').height = 720
+            document.querySelector('iframe').width = 1300
+        }
+    }
+
+    next.addEventListener('click', nextLightbox)
+    window.addEventListener('keyup', (e) => {
+        if (e.keyCode === 39) {
+            nextLightbox()
+        }
     })
-};
 
 // ---- On active la fonction d'écoute du click sur les photos ---------------------------
 openLightbox();

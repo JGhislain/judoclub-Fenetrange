@@ -134,6 +134,13 @@ body {
     object-fit: cover;
     margin: 0;
 }
+.liste video {
+    height: 350px;
+    width: 350px;
+    border-radius: 70px 0px 0 0px;
+    object-fit: cover;
+    margin: 0;
+}
 .media-content {
     display: flex;
     flex-direction: column;
@@ -174,11 +181,15 @@ body {
     color: darkred;
     font-weight: bold !important;
 }
-iframe {
+.yt-classic {
     border-radius: 70px 0px 0 0px;
     margin: 0 auto;
     width: 350px;
     height: 350px;
+}
+.yt-show {
+    width: 100%;
+    height: 100%;
 }
 .lightbox.show {
     display: initial;
@@ -246,6 +257,21 @@ iframe {
     max-width: 100%;
     height: auto;
     animation: lightboxIn 500ms;
+}
+.lightbox-video {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    animation: lightboxIn 500ms;
+}
+.lightbox-link {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    animation: lightboxIn 500ms;
+}
+.lightbox-video.show {
+    display: initial;
 }
 .lightbox__container {
     display: flex;
