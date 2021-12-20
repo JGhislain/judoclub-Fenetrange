@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="../assets/Fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href='../styles/fullcalendar.css' rel='stylesheet' />
+    <link href='../styles/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='../js/jquery-1.10.2.js' type="text/javascript"></script>
+    <script src='../js/jquery-ui.custom.min.js' type="text/javascript"></script>
+    <script src='../js/fullcalendar.js' type="text/javascript"></script>
     <title>Agenda du Judo-Club</title>
 </head>
 
@@ -38,8 +43,11 @@
     </header>
     <main>
         <section class="section-activite">
-            <h2 class="titre-activite">ACTIVITÉS DU JUDO-CLUB</h2>
-
+            <h2 class="titre-activite">AGENDA DU JUDO-CLUB</h2>
+            <div id='wrap'>
+                <div id='calendar'></div>    
+                <div style='clear:both'></div>
+            </div>
         </section>
     </main>
     <script src="../js/agenda.js"></script>
