@@ -71,9 +71,9 @@ nav {
 .naviguation {
     font-size: 1.5vw;
     text-decoration: none;
-    color: var(--red-color);
+    color: var(--tertiaire-color);
     font-weight: bold;
-    border: 2px solid var(--red-color);
+    border: 2px solid var(--tertiaire-color);
     border-radius: 20px 0px 20px 0px;
     padding: 0.3vh 1.3vw;
     cursor: pointer;
@@ -136,5 +136,9 @@ footer {
     color: var(--primaire-color);
 }
 .icone-contact {
+    padding: 0 0.5em 0 1em;
+    font-size: 1.1em;
+}
+.icone-partenaire {
     padding: 0 0.5em 0 1em;
 }
