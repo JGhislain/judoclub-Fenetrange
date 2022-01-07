@@ -111,14 +111,14 @@ nav {
     flex-wrap: wrap;
 }
 .profil-equipe {
-    width: 27%;
-    min-width: 380px;
-    height: 470px;
+    width: 20%;
+    min-width: 340px;
+    height: 550px;
     background-color: var(--tertiaire-color);
-    border-radius: 70px 0px 70px 0px;
-    padding: 2em 1em;
+    padding: 2em 1.5em;
     display: flex;
     flex-direction: column;
+    border-radius: 70px 0px 70px 0px;
     margin: 2em 1em;
 }
 .profil-equipe:hover {
@@ -141,6 +141,8 @@ nav {
     font-weight: bold;
     text-align: center;
     margin: 0;
+    padding: 2% 10% 5% 10%;
+    word-spacing: 5vw;
 }
 .groupe {
     display: flex;
@@ -150,21 +152,20 @@ nav {
     display: flex;
     justify-content: space-between;
 }
+.details-membre {
+    font-size: 1.2em;
+}
 .titre-groupe {
-    font-size: 1.3em;
     color: var(--second-color);
 }
 .nom-groupe {
-    font-size: 1.3em;
     color: var(--red-color);
     font-weight: bold;
 }
 .titre-classe {
-    font-size: 1.3em;
     color: var(--second-color);
 }
 .position-classe {
-    font-size: 1.3em;
     color: var(--red-color);
     font-weight: bold;
 }
@@ -173,11 +174,9 @@ nav {
     justify-content: space-between;
 }
 .titre-categorie {
-    font-size: 1.3em;
     color: var(--second-color);
 }
 .position-categorie {
-    font-size: 1.3em;
     color: var(--red-color);
     font-weight: bold;
 }
@@ -186,12 +185,10 @@ nav {
     justify-content: space-between;
 }
 .titre-rang {
-    font-size: 1.3em;
     color: var(--second-color);
 }
 .position-rang {
     display: flex;
-    font-size: 1.3em;
     color: var(--red-color);
     font-weight: bold;
 }
@@ -204,11 +201,9 @@ nav {
     justify-content: space-between;
 }
 .titre-fonction {
-    font-size: 1.3em;
     color: var(--second-color);
 }
 .club-fonction {
-    font-size: 1.3em;
     color: var(--red-color);
     font-weight: bold;
 }
