@@ -93,7 +93,7 @@ nav {
 }
 .titre-activite {
     color: var(--tertiaire-color);
-    margin: 5vh 2vw;
+    margin: 6vh 2vw 6vh 2vw;
     font-size: 2em;
 }
 #wrap {
