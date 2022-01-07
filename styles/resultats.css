@@ -98,15 +98,15 @@ nav {
 }
 .actu-resultat {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 .article-resultat {
     margin: 2vh auto;
-    width: 70%;
-    min-width: 900px;
+    width: 40%;
+    min-width: 535px;
     background-color: var(--tertiaire-color);
     border-radius: 70px 0px 70px 0px;
-    height: 220px;
+    height: 240px;
 }
 .article-resultat:hover {
     box-shadow: inset 0em 0em 5em 0em var(--red-color);
@@ -133,7 +133,7 @@ nav {
 }
 .img-tournoi {
     width: 100%;
-    height: 185px;
+    height: 200px;
     object-fit: cover;
     border-radius: 70px 0 70px 0;
 }
