@@ -1,29 +1,24 @@
 :root {
-    --primaire-color: #ED2527;
+    --primaire-color: #B10101;
     --secondaire-color: #181818;
     --tertiaire-color:  #F9F9F9;
     --font-color: #000;
     --red-color: #EDC73E;
     --background-color: linear-gradient(to bottom, #181818 0%, #ED2527 50%, #F9F9F9 100%);
 }
-* {
-    font-family: 'Rubik', sans-serif;;
+@font-face {
+    font-family: "j.d";
+    src: url("../assets/fonts/jd/j.d.ttf");
 }
-html {
+* {
+    font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
-    background: var(--primaire-color);
-    background: var(--background-color);
 }
 body {
     margin: 0;
 }
-main {
-    margin: 0 3%;
-}
 header {
-    background: url(../assets/img/accueil/banderole-vide.jpg) no-repeat;
-    background-size: cover;
-    background-size: 100% 100%;
+    background-color: var(--secondaire-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +32,6 @@ header {
     height: 32.5vh;
 }
 .logo-jcf {
-    margin-bottom: 6vh;
     margin-left: 5vw;
     height: 71%;
     width: 10%;
@@ -46,23 +40,23 @@ header {
     display: flex;
     align-self: center;
     justify-content: center;
-    font-family: 'Caesar Dressing', cursive;
+    font-family: 'j.d', 'sans-serif';
     width: 50%;
     font-size: 8vh;
     letter-spacing: 0.3em;
-    padding-bottom: 0vh;
     text-align: center;
-    margin: 0;
+    margin: 2vh 0 0 0;
+    line-height: 12vh;
+    color: var(--tertiaire-color);
 }
 .logo-ffjda {
-    margin-bottom: 6vh;
     margin-right: 3vw;
     height: 60%;
     width: 10%;
 }
 nav {
-    margin: 2vh 0;
-    width: 90%;
+    margin: 2vh 0 0 0;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,22 +73,37 @@ nav {
     cursor: pointer;
 }
 .naviguation:hover {
-    background-color: var(--red-color);
-    color: var(--font-color);
-    border: 2px solid var(--tertiaire-color);
+    background-color: var(--primaire-color);
+    color: var(--red-color);
+    border: 2px solid var(--red-color);
 }
 .page-active {
-    background-color: var(--red-color);
-    border: 2px solid var(--tertiaire-color);
-    color: var(--font-color);
+    background-color: var(--primaire-color);
+    border: 2px solid var(--red-color);
+    color: var(--red-color);
+}
+.liste-nav {
+    height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -10000px;
+    width: 1px;
+}
+main {
+    background: var(--background-color);
+}
+.principal-content {
+    margin: 0 3%;
 }
 .section-activite {
     padding-bottom: 4em;
 }
 .titre-activite {
     color: var(--tertiaire-color);
-    margin: 6vh 2vw;
+    margin: auto;
     font-size: 2em;
+    padding: 6vh 2vw;
 }
 .activites {
     display: flex;
