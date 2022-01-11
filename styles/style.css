@@ -125,6 +125,7 @@ nav {
     color: var(--tertiaire-color);
     display: block;
     padding: 1vh 0;
+    max-width: 12vw;
 }
 .lien-rapide:hover {
     color: var(--red-color);
