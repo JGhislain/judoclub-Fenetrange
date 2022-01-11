@@ -179,10 +179,10 @@ main {
 .principal-content {
     margin: 0 3%;
 }
-.section-activite {
+.section-principal {
     padding-bottom: 4em;
 }
-.titre-activite {
+.titre-section {
     animation: transition 300ms both;
     color: var(--tertiaire-color);
     margin: auto;
