@@ -227,12 +227,12 @@ footer {
     padding: 0 0.5vw;
     cursor: pointer;
 }
-.facebook {
+.logo-lien-footer {
     height: 10vh;
     border-radius: 10px 0px 10px 0px;
     background-color: transparent;
 }
-.facebook:hover {
+.logo-lien-footer:hover {
     box-shadow: 3px 3px 5px 3px var(--red-color);
 }
 .moselle {
