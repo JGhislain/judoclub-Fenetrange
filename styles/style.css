@@ -60,21 +60,21 @@ nav {
     margin: 3vh 0 0 0;
     width: 95%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 4vh;
 }
 .naviguation {
-    font-size: 1.4em;
+    font-size: 1.3em;
     text-decoration: none;
     color: var(--tertiaire-color);
     font-weight: bold;
     border: 2px solid var(--tertiaire-color);
     border-radius: 20px 0px 20px 0px;
-    margin: auto 0.3vw;
+    margin: auto 0.2vw;
     text-align: center;
     cursor: pointer;
-    padding: 0.5vh 1vw;
+    padding: 0.5vh 0.5vw;
     z-index: 10;
 
 }
