@@ -204,13 +204,14 @@ main {
     padding-bottom: 4em;
 }
 .titre-section {
-    animation: transition 300ms both;
+    animation: transition 200ms both;
     color: var(--tertiaire-color);
     margin: auto;
     font-size: 2em;
     padding: 8vh 0vw 3vh 2vw;
 }
 #wrap {
+    animation: defilement 400ms both;
     text-align: center;
     width: 950px;
     margin: 0 auto;
