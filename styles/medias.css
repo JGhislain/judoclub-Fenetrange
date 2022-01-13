@@ -2,8 +2,8 @@
     --primaire-color: #B10101;
     --secondaire-color: #181818;
     --tertiaire-color:  #F9F9F9;
+    --quaternaire-color: #EDC73E;
     --font-color: #000;
-    --red-color: #EDC73E;
     --background-color: linear-gradient(to bottom, #181818 0%, #ED2527 50%, #F9F9F9 100%);
 }
 @keyframes spinner {
@@ -46,6 +46,22 @@
     }
     100% {
         height: 670px;
+    }
+}
+@keyframes nav-box {
+    0% {
+        width: auto;
+        height: 0;
+        opacity: 0;
+    }
+    80% {
+        width: auto;
+        height: fit-content;
+        opacity: 0;
+    }
+    100% {
+        height: auto;
+        opacity: 1;
     }
 }
 @font-face {
@@ -107,38 +123,41 @@ nav {
     height: 4vh;
 }
 .naviguation {
-    font-size: 1.3em;
     text-decoration: none;
     color: var(--tertiaire-color);
     font-weight: bold;
     border: 2px solid var(--tertiaire-color);
     border-radius: 20px 0px 20px 0px;
-    margin: auto 0.2vw;
+    margin: auto 0.3vw;
     text-align: center;
     cursor: pointer;
-    padding: 0.5vh 1.3vw;
+    padding: 0.5vh 0;
     z-index: 10;
 
 }
 .naviguation:hover {
     background-color: var(--primaire-color);
-    border: 2px solid var(--red-color);
+    border: 2px solid var(--quaternaire-color);
 }
 .page-active {
     background-color: var(--primaire-color);
-    border: 2px solid var(--red-color);
-    color: var(--red-color);
+    border: 2px solid var(--quaternaire-color);
+    color: var(--quaternaire-color);
 }
 .lien-nav {
     text-decoration: none;
     color: var(--tertiaire-color);
+    padding: 0 0.5vw;
+    font-size: 1.25em;
 }
 .naviguation:hover .lien-nav {
-    color: var(--red-color);
+    color: var(--quaternaire-color);
 }
 .lien-actif {
-    color: var(--red-color);
+    color: var(--quaternaire-color);
     text-decoration: none;
+    padding: 0 0.5vw;
+    font-size: 1.25em;
 }
 .nav-rapide {
     height: 1px;
@@ -151,7 +170,7 @@ nav {
     padding: 1vh 0;
 }
 .naviguation:hover .nav-rapide {
-    animation: loader 300ms ease-in-out;
+    animation: nav-box 400ms linear;
     height: auto;
     width: auto;
     position: initial;
@@ -167,11 +186,13 @@ nav {
     text-decoration: none;
     color: var(--tertiaire-color);
     display: block;
-    padding: 1vh 0;
+    padding: 1vh 0.5vw;
+    font-size: 1.20em;
     max-width: 12vw;
+    word-wrap: break-word;
 }
 .lien-rapide:hover {
-    color: var(--red-color);
+    color: var(--quaternaire-color);
 }
 .rapide {
     padding: 1vh 0;
@@ -195,7 +216,7 @@ main {
 .retour-gallerie {
     margin: 0vh 2vw 0vh 2vw;
     font-size: 4em;
-    color: var(--red-color);
+    color: var(--quaternaire-color);
 }
 .retour-gallerie:hover {
     color: var(--primaire-color);
@@ -239,7 +260,7 @@ main {
     padding: 0.5em 0.5em 0 0.5em;
 }
 .media-content:hover {
-    box-shadow: inset 0em 0em 5em 0em var(--red-color);
+    box-shadow: inset 0em 0em 5em 0em var(--quaternaire-color);
     opacity: 0.9;
     border-radius: 70px 0px 70px 0px;
 }
@@ -302,7 +323,7 @@ main {
     transition: opacity 300ms;
     opacity: 0.5;
     cursor: pointer;
-    color: var(--red-color);
+    color: var(--quaternaire-color);
     background-color: var(--tertiaire-color);
 }
 .lightbox__preview {
@@ -316,7 +337,7 @@ main {
     opacity: 0.5;
     transition: opacity 300ms;
     cursor: pointer;
-    color: var(--red-color);
+    color: var(--quaternaire-color);
     background-color: var(--tertiaire-color);
 }
 .lightbox__close {
@@ -330,7 +351,7 @@ main {
     cursor: pointer;
     transition: opacity 300ms;
     z-index: 11;
-    color: var(--red-color);
+    color: var(--quaternaire-color);
     background-color: var(--font-color);
 }
 .lightbox__preview:hover,
@@ -389,7 +410,7 @@ footer {
     background-color: transparent;
 }
 .logo-lien-footer:hover {
-    box-shadow: 3px 3px 5px 3px var(--red-color);
+    box-shadow: 3px 3px 5px 3px var(--quaternaire-color);
 }
 .moselle {
     height: 10vh;
@@ -398,7 +419,7 @@ footer {
     background-color: transparent;
 }
 .moselle:hover {
-    box-shadow: 3px 3px 5px 3px var(--red-color);
+    box-shadow: 3px 3px 5px 3px var(--quaternaire-color);
 }
 .liste-contact {
     color: var(--secondaire-color);

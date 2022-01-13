@@ -2,8 +2,8 @@
     --primaire-color: #B10101;
     --secondaire-color: #181818;
     --tertiaire-color:  #F9F9F9;
-    --font-color: #000;
     --quaternaire-color: #EDC73E;
+    --font-color: #000;
     --background-color: linear-gradient(to bottom, #181818 0%, #ED2527 50%, #F9F9F9 100%);
 }
 @keyframes spinner {
@@ -50,13 +50,13 @@
 }
 @keyframes nav-box {
     0% {
-        width: 0;
+        width: auto;
         height: 0;
         opacity: 0;
     }
-    50% {
+    80% {
         width: auto;
-        height: auto;
+        height: fit-content;
         opacity: 0;
     }
     100% {
@@ -123,16 +123,15 @@ nav {
     height: 4vh;
 }
 .naviguation {
-    font-size: 1.3em;
     text-decoration: none;
     color: var(--tertiaire-color);
     font-weight: bold;
     border: 2px solid var(--tertiaire-color);
     border-radius: 20px 0px 20px 0px;
-    margin: auto 0.2vw;
+    margin: auto 0.3vw;
     text-align: center;
     cursor: pointer;
-    padding: 0.5vh 1.3vw;
+    padding: 0.5vh 0;
     z-index: 10;
 
 }
@@ -148,6 +147,8 @@ nav {
 .lien-nav {
     text-decoration: none;
     color: var(--tertiaire-color);
+    padding: 0 0.5vw;
+    font-size: 1.25em;
 }
 .naviguation:hover .lien-nav {
     color: var(--quaternaire-color);
@@ -155,6 +156,8 @@ nav {
 .lien-actif {
     color: var(--quaternaire-color);
     text-decoration: none;
+    padding: 0 0.5vw;
+    font-size: 1.25em;
 }
 .nav-rapide {
     height: 1px;
@@ -167,7 +170,7 @@ nav {
     padding: 1vh 0;
 }
 .naviguation:hover .nav-rapide {
-    animation: loader 400ms ease-in-out;
+    animation: nav-box 400ms linear;
     height: auto;
     width: auto;
     position: initial;
@@ -183,8 +186,10 @@ nav {
     text-decoration: none;
     color: var(--tertiaire-color);
     display: block;
-    padding: 1vh 0;
+    padding: 1vh 0.5vw;
+    font-size: 1.20em;
     max-width: 12vw;
+    word-wrap: break-word;
 }
 .lien-rapide:hover {
     color: var(--quaternaire-color);
