@@ -6,12 +6,12 @@
     --font-color: #000;
     --background-color: linear-gradient(to bottom, #181818 0%, #ED2527 50%, #F9F9F9 100%);
 }
-@keyframes spinner {
+@keyframes cadre-president {
     0% {
-      transform: rotate(0deg);
+      width: 40%;
     }
     100% {
-      transform: rotate(360deg);
+      width: 70%;
     }
 }
 @keyframes transition {
@@ -22,9 +22,32 @@
         transform: translateX(0);
     }
 }
-@keyframes loader {
+@keyframes loader-text {
     0% {
+        width: 0;
+        height: 0;
         opacity: 0;
+    }
+    80% {
+        width: auto;
+        height: auto;
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes loader-text2 {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    80% {
+        width: 40%;
+        min-width: 380px;
+        height: auto;
+        opacity: 0.3;
     }
     100% {
         opacity: 1;
@@ -211,7 +234,7 @@ main {
     padding: 8vh 0vw 3vh 2vw;
 }
 .article-president {
-    width: 70%;
+    width: 40%;
     margin: 2vh auto;
     text-align: justify;
     background-color: var(--tertiaire-color);
@@ -220,7 +243,17 @@ main {
     flex-direction: column;
     border-radius: 70px 0px 70px 0px;
 }
+.article-president:hover {
+    animation: cadre-president 200ms ease-in-out;
+    width: 70%;
+}
 .p-p {
+    height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -10000px;
+    width: 1px;
     line-height: 30px;
     padding: 0 4vw;
     font-size: 1.2em;
@@ -230,30 +263,45 @@ main {
     color: var(--primaire-color);
     font-weight: bold;
 }
+.article-president:hover .p-p {
+    animation: loader-text 400ms ease-in-out;
+    height: auto;
+    overflow: initial;
+    position: initial;
+    width: auto;
+}
 h3 {
     font-size: 2em;
     color: var(--primaire-color);
     font-weight: bold;
     margin: auto auto 3vh auto;
-    padding: 0 2vw;
+
+    width: min-content;
 }
 .actu-general {
     display: flex;
+    justify-content: center;
 }
 .actu-club {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 .article-actualites {
     margin: 2vh auto;
-    width: 70%;
+    width: 40%;
     align-items: center;
     background-color: var(--tertiaire-color);
     padding: 0 1.5em;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 70px 0px 70px 0px;
+}
+.article-actualites:hover {
+    animation: cadre-president 200ms ease-in-out;
+    width: 70%;
+    justify-content: space-between;
 }
 .bloc-titre {
     width: 40%;
@@ -261,14 +309,39 @@ h3 {
     padding: 2vh 2vw;
 }
 .contenu-actu {
+    height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -10000px;
+    width: 1px;
     padding: 1vh 2vw;
     text-align: justify;
-    font-size: 1.1em;
+    font-size: 1.2em;
+}
+.article-actualites:hover .contenu-actu {
+    animation: loader-text 400ms ease-in-out;
+    height: auto;
+    overflow: initial;
+    position: initial;
+    width: auto;
 }
 .bloc-contenu {
+    height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -10000px;
+    width: 1px;
+}
+.article-actualites:hover .bloc-contenu {
+    animation: loader-text2 400ms ease-in-out;
     width: 40%;
     min-width: 380px;
     padding: 2vh 2vw;
+    height: auto;
+    overflow: initial;
+    position: initial;
 }
 .liste-reprise {
     padding: 0;
