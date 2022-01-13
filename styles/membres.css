@@ -26,6 +26,9 @@
     0% {
         opacity: 0;
     }
+    50% {
+        opacity: 0;
+    }
     100% {
         opacity: 1;
     }
@@ -42,10 +45,10 @@
 }
 @keyframes size {
     0% {
-        height: 490px;
+        height: 370px;
     }
     100% {
-        height: 670px;
+        height: 590px;
     }
 }
 @keyframes nav-box {
@@ -204,13 +207,14 @@ main {
     padding-bottom: 4em;
 }
 .titre-section {
-    animation: transition 300ms both;
+    animation: transition 200ms both;
     color: var(--tertiaire-color);
     margin: auto;
     font-size: 2em;
     padding: 8vh 0vw 3vh 2vw;
 }
 .equipe {
+    animation: defilement 400ms both;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -219,7 +223,7 @@ main {
 .profil-equipe {
     width: 20%;
     min-width: 340px;
-    height: 590px;
+    height: 370px;
     background-color: var(--tertiaire-color);
     padding: 2em 1.5em;
     display: flex;
@@ -228,9 +232,11 @@ main {
     margin: 2em 1em;
 }
 .profil-equipe:hover {
+    animation: size 400ms ease-in-out;
     box-shadow: inset 0em 0em 5em 0em var(--quaternaire-color);
     opacity: 0.9;
     border-radius: 70px 0px 70px 0px;
+    height: 590px;
 }
 .lien-equipe {
     align-self: center;
@@ -253,13 +259,30 @@ main {
 .groupe {
     display: flex;
     justify-content: space-between;
+    margin: 2vh 0 0 0;
 }
 .classement {
     display: flex;
     justify-content: space-between;
+    margin: 2vh 0 0 0;
 }
 .details-membre {
+    height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -10000px;
+    width: 1px;
+}
+.profil-equipe:hover .details-membre {
+    animation: loader 400ms linear;
+    display: flex;
+    flex-direction: column;
     font-size: 1.2em;
+    position: initial;
+    overflow: initial;
+    height: auto;
+    width: auto;
 }
 .titre-groupe {
     color: var(--second-color);
@@ -267,6 +290,7 @@ main {
 .nom-groupe {
     color: var(--quaternaire-color);
     font-weight: bold;
+    text-align: right;
 }
 .titre-classe {
     color: var(--second-color);
@@ -274,10 +298,12 @@ main {
 .position-classe {
     color: var(--quaternaire-color);
     font-weight: bold;
+    text-align: right;
 }
 .categorie {
     display: flex;
     justify-content: space-between;
+    margin: 2vh 0 0 0;
 }
 .titre-categorie {
     color: var(--second-color);
@@ -285,10 +311,12 @@ main {
 .position-categorie {
     color: var(--quaternaire-color);
     font-weight: bold;
+    text-align: right;
 }
 .rang {
     display: flex;
     justify-content: space-between;
+    margin: 2vh 0 0 0;
 }
 .titre-rang {
     color: var(--second-color);
@@ -297,6 +325,7 @@ main {
     display: flex;
     color: var(--quaternaire-color);
     font-weight: bold;
+    text-align: right;
 }
 .rang-img {
     width: 3em;
@@ -305,6 +334,7 @@ main {
 .fonction {
     display: flex;
     justify-content: space-between;
+    margin: 2vh 0 0 0;
 }
 .titre-fonction {
     color: var(--second-color);
@@ -312,6 +342,7 @@ main {
 .club-fonction {
     color: var(--quaternaire-color);
     font-weight: bold;
+    text-align: right;
 }
 footer {
     background-color: var(--tertiaire-color);

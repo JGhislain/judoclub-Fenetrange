@@ -204,7 +204,7 @@ main {
     padding-bottom: 4em;
 }
 .titre-section {
-    animation: transition 300ms both;
+    animation: transition 200ms both;
     color: var(--tertiaire-color);
     margin: auto;
     font-size: 2em;
@@ -228,9 +228,6 @@ main {
     flex-direction: column;
     border-radius: 70px 0px 70px 0px;
     margin: 2vh 1.5vw;
-}
-.lien-equipe {
-    align-self: center;
 }
 .article:hover {
     box-shadow: inset 0em 0em 3em 0em var(--quaternaire-color);
