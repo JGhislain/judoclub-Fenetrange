@@ -8,10 +8,12 @@
 }
 @keyframes spinner {
     0% {
-      transform: rotate(0deg);
+        color: var(--quaternaire-color);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        color: var(--primaire-color);
+        transform: rotate(360deg);
     }
 }
 @keyframes transition {
@@ -73,6 +75,22 @@
 * {
     font-family: 'Rubik', 'sans-serif';
     box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--background-color);
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0em 0em 0.3em 0em var(--secondaire-color);
+}
+::-webkit-scrollbar-track {
+    background: var(--tertiaire-color);
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px var(--tertiaire-color);
 }
 body {
     margin: 0;
@@ -195,7 +213,7 @@ nav {
     color: var(--quaternaire-color);
 }
 .rapide {
-    padding: 1vh 0;
+    padding: 1vh 0.5vw;
 }
 main {
     background: var(--background-color);
@@ -206,8 +224,10 @@ main {
 .section-principal {
     padding-bottom: 4em;
 }
+.section-titre {
+    animation: transition 200ms both;
+}
 .titre-section {
-    animation: transition 300ms both;
     color: var(--tertiaire-color);
     margin: auto;
     font-size: 2em;
@@ -218,11 +238,15 @@ main {
     font-size: 4em;
     color: var(--quaternaire-color);
 }
-.retour-gallerie:hover {
-    color: var(--primaire-color);
-}
 .icone-retour {
     margin-top: 3vh;
+}
+.icone-retour:hover {
+    animation: spinner 400ms linear;
+    color: var(--primaire-color);
+}
+.histoire-judo {
+    animation: defilement 400ms both;
 }
 footer {
     background-color: var(--tertiaire-color);

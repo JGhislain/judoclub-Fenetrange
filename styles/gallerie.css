@@ -6,12 +6,24 @@
     --font-color: #000;
     --background-color: linear-gradient(to bottom, #181818 0%, #ED2527 50%, #F9F9F9 100%);
 }
-@keyframes spinner {
+@keyframes spinner-article {
     0% {
       transform: rotate(0deg);
     }
+    20% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(-5deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
     100% {
-      transform: rotate(360deg);
+      transform: rotate(0deg);
     }
 }
 @keyframes transition {
@@ -73,6 +85,22 @@
 * {
     font-family: 'Rubik', 'sans-serif';
     box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--background-color);
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0em 0em 0.3em 0em var(--secondaire-color);
+}
+::-webkit-scrollbar-track {
+    background: var(--tertiaire-color);
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px var(--tertiaire-color);
 }
 body {
     margin: 0;
@@ -211,6 +239,7 @@ main {
     padding: 8vh 0vw 3vh 2vw;
 }
 .liste {
+    animation: defilement 400ms both;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -247,11 +276,13 @@ main {
     font-size: 7em;
 }
 .link-media-saison:hover {
+    animation: spinner-article 400ms ease-in-out;
     box-shadow: inset 0em 0em 5em 0em var(--quaternaire-color);
     opacity: 0.9;
     border-radius: 70px 0px 70px 0px;
 }
 .link-media:hover {
+    animation: spinner-article 400ms ease-in-out;
     box-shadow: inset 0em 0em 5em 0em var(--primaire-color);
     opacity: 0.9;
     border-radius: 70px 0px 70px 0px;

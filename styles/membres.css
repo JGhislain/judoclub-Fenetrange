@@ -77,6 +77,22 @@
     font-family: 'Rubik', 'sans-serif';
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--background-color);
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0em 0em 0.3em 0em var(--secondaire-color);
+}
+::-webkit-scrollbar-track {
+    background: var(--tertiaire-color);
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px var(--tertiaire-color);
+}
 body {
     margin: 0;
 }

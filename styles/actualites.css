@@ -97,6 +97,22 @@
     font-family: 'Rubik', 'sans-serif';
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--background-color);
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0em 0em 0.3em 0em var(--secondaire-color);
+}
+::-webkit-scrollbar-track {
+    background: var(--tertiaire-color);
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px var(--tertiaire-color);
+}
 body {
     margin: 0;
 }
@@ -227,11 +243,18 @@ main {
     padding-bottom: 4em;
 }
 .titre-section {
-    animation: transition 300ms both;
+    animation: transition 200ms both;
     color: var(--tertiaire-color);
     margin: auto;
     font-size: 2em;
     padding: 8vh 0vw 3vh 2vw;
+}
+.actu-club {
+    animation: defilement 400ms both;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 .article-president {
     width: 40%;
@@ -276,16 +299,6 @@ h3 {
     font-weight: bold;
     margin: auto auto 3vh auto;
     width: min-content;
-}
-.actu-general {
-    display: flex;
-    justify-content: center;
-}
-.actu-club {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
 }
 .article-actualites {
     margin: 2vh auto;
