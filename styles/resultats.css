@@ -6,12 +6,24 @@
     --font-color: #000;
     --background-color: linear-gradient(to bottom, #181818 0%, #ED2527 50%, #F9F9F9 100%);
 }
-@keyframes spinner {
+@keyframes spinner-article {
     0% {
       transform: rotate(0deg);
     }
+    20% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(-5deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
     100% {
-      transform: rotate(360deg);
+      transform: rotate(0deg);
     }
 }
 @keyframes transition {
@@ -204,13 +216,14 @@ main {
     padding-bottom: 4em;
 }
 .titre-section {
-    animation: transition 300ms both;
+    animation: transition 200ms both;
     color: var(--tertiaire-color);
     margin: auto;
     font-size: 2em;
     padding: 8vh 0vw 3vh 2vw;
 }
 .actu-resultat {
+    animation: defilement 400ms both;
     display: flex;
     flex-wrap: wrap;
 }
@@ -223,6 +236,7 @@ main {
     height: 240px;
 }
 .article-resultat:hover {
+    animation: spinner-article 400ms ease-in-out;
     box-shadow: inset 0em 0em 5em 0em var(--quaternaire-color);
     opacity: 0.9;
     border-radius: 70px 0px 70px 0px;
