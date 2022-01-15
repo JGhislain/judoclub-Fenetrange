@@ -258,9 +258,6 @@ main {
 .tableau {
     width: 100%;
 }
-.grade {
-    width: 8%;
-}
 div.petits-tigres {
     background-color: var(--primaire-color);
     width: 100%;
