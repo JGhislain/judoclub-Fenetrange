@@ -247,7 +247,56 @@ main {
 }
 .classement {
     animation: defilement 400ms both;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 1em;
+    border-radius: 70px 0px 70px 0px;
+    padding: 2em;
+    background-color: var(--tertiaire-color);
 }
+.tableau {
+    width: 100%;
+}
+.grade {
+    width: 8%;
+}
+div.petits-tigres {
+    background-color: var(--primaire-color);
+    width: 100%;
+    text-align: center;
+}
+.divTable.petits-tigres .divTableCell, .divTable.petits-tigres .divTableHead {
+    border: 1px solid var(--tertiaire-color);
+    padding: 3px 2px;
+}
+.divTable.petits-tigres .divTableBody .divTableCell {
+    font-size: 1em;
+    color: var(--tertiaire-color)
+}
+.divTable.petits-tigres .divTableRow:nth-child(even) {
+    background: var(--secondaire-color);
+}
+.divTable.petits-tigres .divTableHeading {
+    background: #F9F9F9;
+    background: -moz-linear-gradient(top, var(--quaternaire-color) 0%, #f9f9f9 66%, var(--secondaire-color) 100%);
+    background: -webkit-linear-gradient(top, var(--quaternaire-color) 0%, #f9f9f9 66%, var(--secondaire-color) 100%);
+    background: linear-gradient(to bottom, var(--quaternaire-color) 0%, #f9f9f9 66%, var(--secondaire-color) 100%);
+    border-bottom: 2px solid #444444;
+}
+.divTable.petits-tigres .divTableHeading .divTableHead {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #B10101;
+    text-align: center;
+}
+  /* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableBody { display: table-row-group;}
 footer {
     background-color: var(--tertiaire-color);
     width: 100%;
