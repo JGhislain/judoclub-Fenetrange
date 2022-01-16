@@ -52,15 +52,10 @@
 }
 @keyframes nav-box {
     0% {
-        width: 1px;
         height: 1px;
         opacity: 0;
     }
-    25% {
-        width: 150px;
-    }
     50% {
-        width: auto;
         opacity: 0;
     }
     95% {
@@ -142,7 +137,7 @@ nav {
     margin: 3vh 0;
     width: 95%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 4vh;
 }
@@ -277,11 +272,16 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
     margin: 10vh 0;
 }
 .img-technique {
     width: 20%;
+}
+.fleche-droite {
+    font-size: 5em;
+    color: var(--primaire-color);
 }
 .cadre-description {
     width: 80%;

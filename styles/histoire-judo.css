@@ -52,15 +52,10 @@
 }
 @keyframes nav-box {
     0% {
-        width: 1px;
         height: 1px;
         opacity: 0;
     }
-    25% {
-        width: 150px;
-    }
     50% {
-        width: auto;
         opacity: 0;
     }
     95% {
@@ -142,7 +137,7 @@ nav {
     margin: 3vh 0;
     width: 95%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 4vh;
 }
