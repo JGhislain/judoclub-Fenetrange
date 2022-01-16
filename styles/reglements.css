@@ -70,16 +70,23 @@
 }
 @keyframes nav-box {
     0% {
-        width: 0;
-        height: 0;
+        width: 1px;
+        height: 1px;
         opacity: 0;
+    }
+    25% {
+        width: 150px;
     }
     50% {
         width: auto;
-        height: auto;
         opacity: 0;
     }
+    95% {
+        height: 130px;
+        opacity: 0.4;
+    }
     100% {
+        height: auto;
         opacity: 1;
     }
 }
@@ -205,7 +212,7 @@ nav {
     padding: 1vh 0;
 }
 .naviguation:hover .nav-rapide {
-    animation: nav-box 400ms ease-in-out;
+    animation: nav-box 600ms ease-in-out;
     height: auto;
     width: auto;
     position: initial;
