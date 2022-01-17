@@ -272,7 +272,6 @@ main {
     text-align: center;
     color: var(--primaire-color);
     font-size: 1.3em;
-    word-wrap: break-word;
 }
 .bloc-contenu {
     width: 40%;

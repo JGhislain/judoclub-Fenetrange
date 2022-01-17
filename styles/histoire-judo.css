@@ -247,8 +247,74 @@ main {
     animation: spinner 400ms linear;
     color: var(--primaire-color);
 }
-.histoire-judo {
+.article-histoire {
     animation: defilement 400ms both;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 1em;
+    border-radius: 70px 0px 70px 0px;
+    padding: 2em;
+    background-color: var(--tertiaire-color);
+}
+.titre-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 0;
+}
+.image-titre {
+    width: 6vw;
+    margin: 0 2vw;
+}
+.titre-histoire {
+    color: var(--primaire-color);
+    font-size: 2.5em;
+    border: 3px solid;
+    border-radius: 30px 0 30px 0;
+    padding: 0.5vh 1vw;
+}
+.texte-histoire {
+    text-align: justify;
+    margin: 0 5vw 5vh 5vw;
+}
+.titre-paraph {
+    color: var(--primaire-color);
+    font-size: 1.5em;
+    padding-left: 1vw;
+}
+.texte-paraph {
+    font-size: 1.1em;
+    text-indent: 1vw;
+    line-height: 1.2em;
+}
+.img-paraph {
+    display: flex;
+    justify-content: space-between;
+    margin: 5vh 0;
+}
+.image-paragraphe {
+    width: 30%;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 30px;
+}
+.image-paragraphe-bis {
+    width: 45%;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 30px;
+}
+.texte-liste-paraph {
+    font-size: 1.1em;
+    line-height: 4vh;
+}
+.liste-paraph {
+    padding-left: 1vw;
+}
+.titre-liste {
+    font-weight: bold;
+    margin: 0;
 }
 footer {
     background-color: var(--tertiaire-color);
