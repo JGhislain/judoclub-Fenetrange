@@ -44,19 +44,10 @@
 }
 @keyframes size {
     0% {
-        transform: scale(1, 1);
-    }
-    25% {
-        transform: scale(1.25, 1.25);
-    }
-    50% {
-        transform: scale(1, 1);
-    }
-    75% {
-        transform: scale(1.25, 1.25);
+        height: 490px;
     }
     100% {
-        transform: scale(1, 1);
+        height: 670px;
     }
 }
 @keyframes nav-box {
@@ -242,7 +233,7 @@ main {
     color: var(--tertiaire-color);
     margin: auto;
     font-size: 2em;
-    padding: 3vh 0vw 3vh 2vw;
+    padding: 5vh 0vw 0vh 2vw;
 }
 .retour-gallerie {
     margin: 0vh 2vw 0vh 2vw;
@@ -261,7 +252,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: auto;
+    margin: 5vh 1em;
     border-radius: 70px 0px 70px 0px;
     padding: 2em;
     background-color: var(--tertiaire-color);
