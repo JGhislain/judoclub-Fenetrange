@@ -24,14 +24,6 @@
         transform: translateX(0);
     }
 }
-@keyframes transition {
-    0% {
-        transform: translateX(-150vw);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
 @keyframes loader {
     0% {
         opacity: 0;
@@ -231,6 +223,9 @@ main {
 .principal-content {
     margin: 0 3%;
 }
+.section-principal {
+    padding-bottom: 4em;
+}
 .section-titre {
     animation: transition 200ms both;
 }
@@ -238,7 +233,7 @@ main {
     color: var(--tertiaire-color);
     margin: auto;
     font-size: 2em;
-    padding: 3vh 0vw 3vh 2vw;
+    padding: 5vh 0vw 0vh 2vw;
 }
 .retour-gallerie {
     margin: 0vh 2vw 0vh 2vw;
@@ -252,8 +247,74 @@ main {
     animation: spinner 400ms linear;
     color: var(--primaire-color);
 }
-.histoire-club {
+.article-histoire {
     animation: defilement 400ms both;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 5vh 1em;
+    border-radius: 70px 0px 70px 0px;
+    padding: 3em 10em 0 10em;
+    background-color: var(--tertiaire-color);
+}
+.titre-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 0;
+}
+.image-titre {
+    width: 6vw;
+    margin: 0 2vw;
+}
+.titre-histoire {
+    color: var(--primaire-color);
+    font-size: 2.5em;
+    border: 5px solid var(--primaire-color);
+    border-radius: 50px 0 50px 0;
+    padding: 2vh 1vw;
+}
+.texte-histoire {
+    text-align: justify;
+    margin: 0 5vw 5vh 5vw;
+}
+.titre-paraph {
+    color: var(--primaire-color);
+    font-size: 2em;
+    padding-left: 1vw;
+}
+.texte-paraph {
+    font-size: 1.3em;
+    text-indent: 1vw;
+    line-height: 1.3em;
+}
+.img-paraph {
+    display: flex;
+    justify-content: space-between;
+    margin: 5vh 0;
+}
+.image-paragraphe {
+    width: 45%;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 30px;
+}
+.image-paragraphe-bis {
+    width: 48%;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 30px;
+}
+.texte-liste-paraph {
+    font-size: 1.3em;
+    line-height: 4vh;
+}
+.liste-paraph {
+    padding-left: 1vw;
+}
+.titre-liste {
+    font-weight: bold;
+    margin: 0;
 }
 footer {
     background-color: var(--tertiaire-color);

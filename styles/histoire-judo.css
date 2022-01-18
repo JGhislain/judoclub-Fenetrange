@@ -280,13 +280,13 @@ main {
 }
 .titre-paraph {
     color: var(--primaire-color);
-    font-size: 1.5em;
+    font-size: 2em;
     padding-left: 1vw;
 }
 .texte-paraph {
-    font-size: 1.1em;
+    font-size: 1.3em;
     text-indent: 1vw;
-    line-height: 1.2em;
+    line-height: 1.3em;
 }
 .img-paraph {
     display: flex;
@@ -306,7 +306,7 @@ main {
     border-radius: 30px;
 }
 .texte-liste-paraph {
-    font-size: 1.1em;
+    font-size: 1.3em;
     line-height: 4vh;
 }
 .liste-paraph {
