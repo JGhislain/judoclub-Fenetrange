@@ -187,7 +187,7 @@ nav {
     padding: 1vh 0;
 }
 .naviguation:hover .nav-rapide {
-    animation: nav-box 600ms ease-in-out;
+    animation: nav-box 450ms ease-in-out;
     height: auto;
     width: auto;
     position: initial;
@@ -215,10 +215,10 @@ main {
     background: var(--background-color);
 }
 .principal-content {
-    margin: 0 3%;
+    margin: 0 5%;
 }
 .section-principal {
-    padding-bottom: 4em;
+    padding-bottom: 5vh;
 }
 .titre-section {
     animation: transition 200ms both;
@@ -230,9 +230,8 @@ main {
 #wrap {
     animation: defilement 400ms both;
     text-align: center;
-    width: 950px;
-    margin: 0 auto;
-    padding: 2em;
+    margin-top: 5vh;
+    padding: 5vh 0;
     background-color: var(--tertiaire-color);
     border-radius: 70px 0 70px 0;
     }

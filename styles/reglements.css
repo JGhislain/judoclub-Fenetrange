@@ -207,7 +207,7 @@ nav {
     padding: 1vh 0;
 }
 .naviguation:hover .nav-rapide {
-    animation: nav-box 600ms ease-in-out;
+    animation: nav-box 450ms ease-in-out;
     height: auto;
     width: auto;
     position: initial;
@@ -235,10 +235,10 @@ main {
     background: var(--background-color);
 }
 .principal-content {
-    margin: 0 3%;
+    margin: 0 5%;
 }
 .section-principal {
-    padding-bottom: 4em;
+    padding-bottom: 5vh;
 }
 .titre-section {
     animation: transition 200ms both;
@@ -252,9 +252,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 0 1em;
+    margin: 5vh 0 0 0;
     border-radius: 70px 0px 70px 0px;
-    padding: 2em;
+    padding: 5vh 0;
     background-color: var(--tertiaire-color);
 }
 .liste img {
@@ -269,7 +269,7 @@ main {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    margin: 2vh 2vw;
+    margin: 0em 2em 4em 2em;
     width: 25%;
     height: 350px;
     min-width: 280px;

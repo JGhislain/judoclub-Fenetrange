@@ -9,6 +9,16 @@
 @keyframes cadre-president {
     0% {
       width: 40%;
+      height: 200px;
+    }
+    100% {
+      width: 70%;
+      height: 650px;
+    }
+}
+@keyframes cadre-article {
+    0% {
+      width: 40%;
     }
     100% {
       width: 70%;
@@ -24,14 +34,10 @@
 }
 @keyframes loader-text {
     0% {
-        width: 0;
-        height: 0;
         opacity: 0;
     }
-    80% {
-        width: auto;
-        height: auto;
-        opacity: 0.3;
+    95% {
+        opacity: 0.1;
     }
     100% {
         opacity: 1;
@@ -210,7 +216,7 @@ nav {
     padding: 1vh 0;
 }
 .naviguation:hover .nav-rapide {
-    animation: nav-box 600ms ease-in-out;
+    animation: nav-box 450ms ease-in-out;
     height: auto;
     width: auto;
     position: initial;
@@ -238,10 +244,10 @@ main {
     background: var(--background-color);
 }
 .principal-content {
-    margin: 0 3%;
+    margin: 0 5%;
 }
 .section-principal {
-    padding-bottom: 4em;
+    padding-bottom: 5vh;
 }
 .titre-section {
     animation: transition 200ms both;
@@ -256,6 +262,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 5vh 0;
 }
 .article-president {
     width: 40%;
@@ -268,7 +275,7 @@ main {
     border-radius: 70px 0px 70px 0px;
 }
 .article-president:hover {
-    animation: cadre-president 200ms ease-in-out;
+    animation: cadre-president 450ms ease-in-out;
     width: 70%;
 }
 .p-p {
@@ -288,7 +295,7 @@ main {
     font-weight: bold;
 }
 .article-president:hover .p-p {
-    animation: loader-text 400ms ease-in-out;
+    animation: loader-text 450ms ease-in-out;
     height: auto;
     overflow: initial;
     position: initial;
@@ -312,7 +319,7 @@ h3 {
     border-radius: 70px 0px 70px 0px;
 }
 .article-actualites:hover {
-    animation: cadre-president 200ms ease-in-out;
+    animation: cadre-article 450ms ease-in-out;
     width: 70%;
     justify-content: space-between;
 }
@@ -333,7 +340,7 @@ h3 {
     font-size: 1.2em;
 }
 .article-actualites:hover .contenu-actu {
-    animation: loader-text 400ms ease-in-out;
+    animation: loader-text 450ms ease-in-out;
     height: auto;
     overflow: initial;
     position: initial;

@@ -199,7 +199,7 @@ nav {
     padding: 1vh 0;
 }
 .naviguation:hover .nav-rapide {
-    animation: nav-box 600ms ease-in-out;
+    animation: nav-box 450ms ease-in-out;
     height: auto;
     width: auto;
     position: initial;
@@ -227,13 +227,13 @@ main {
     background: var(--background-color);
 }
 .principal-content {
-    margin: 0 3%;
+    margin: 0 5%;
 }
 .section-principal {
     padding-bottom: 4em;
 }
 .titre-section {
-    animation: transition 300ms both;
+    animation: transition 200ms both;
     color: var(--tertiaire-color);
     margin: auto;
     font-size: 2em;
@@ -244,9 +244,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: auto;
+    margin-top: 5vh;
+    padding: 5vh 2vw;
     border-radius: 70px 0px 70px 0px;
-    padding: 2em;
     background-color: var(--tertiaire-color);
 }
 .link-media-saison {
@@ -277,13 +277,13 @@ main {
     font-size: 7em;
 }
 .link-media-saison:hover {
-    animation: spinner-article 400ms ease-in-out;
+    animation: spinner-article 450ms ease-in-out;
     box-shadow: inset 0em 0em 5em 0em var(--quaternaire-color);
     opacity: 0.9;
     border-radius: 70px 0px 70px 0px;
 }
 .link-media:hover {
-    animation: spinner-article 400ms ease-in-out;
+    animation: spinner-article 450ms ease-in-out;
     box-shadow: inset 0em 0em 5em 0em var(--primaire-color);
     opacity: 0.9;
     border-radius: 70px 0px 70px 0px;
