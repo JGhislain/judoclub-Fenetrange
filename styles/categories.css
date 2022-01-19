@@ -257,6 +257,18 @@ main {
     padding: 5vh 10em;
     background-color: var(--tertiaire-color);
 }
+.titre-tableau {
+    color: var(--primaire-color);
+    font-size: 2em;
+    padding-left: 1vw;
+}
+.texte-categorie {
+    font-size: 1.3em;
+    text-indent: 1vw;
+    line-height: 1.3em;
+    padding: 0 5vw;
+    text-align: justify;
+}
 .article-cat {
     width: 100%;
 }
@@ -264,13 +276,14 @@ div.cat-age {
     background-color: var(--primaire-color);
     width: 100%;
     text-align: center;
+    margin: auto 0;
 }
 .divTable.cat-age .divTableCell, .divTable.cat-age .divTableHead {
     border: 1px solid var(--tertiaire-color);
-    padding: 3px 2px;
+    padding: 6px 2px;
 }
 .divTable.cat-age .divTableBody .divTableCell {
-    font-size: 1em;
+    font-size: 1.3em;
     color: var(--tertiaire-color)
 }
 .divTable.cat-age .divTableRow:nth-child(even) {
@@ -284,7 +297,7 @@ div.cat-age {
     border-bottom: 2px solid #444444;
 }
 .divTable.cat-age .divTableHeading .divTableHead {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #B10101;
     text-align: center;
@@ -294,12 +307,18 @@ div.cat-poids {
     width: 100%;
     text-align: center;
 }
+.tableau-sexe {
+    color: var(--secondaire-color);
+    font-size: 1.7em;
+    padding-left: 2vw;
+    filter: opacity(0.6);
+}
 .divTable.cat-poids .divTableCell, .divTable.cat-poids .divTableHead {
     border: 1px solid var(--tertiaire-color);
-    padding: 3px 2px;
+    padding: 6px 2px;
 }
 .divTable.cat-poids .divTableBody .divTableCell {
-    font-size: 1em;
+    font-size: 1.3em;
     color: var(--tertiaire-color)
 }
 .divTable.cat-poids .divTableRow:nth-child(even) {
@@ -313,7 +332,7 @@ div.cat-poids {
     border-bottom: 2px solid #444444;
 }
 .divTable.cat-poids .divTableHeading .divTableHead {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #B10101;
     text-align: center;
