@@ -242,8 +242,8 @@ main {
     padding: 5vh 0;
 }
 .profil-equipe {
-    width: 20%;
-    min-width: 340px;
+    width: 21%;
+    min-width: 320px;
     height: 370px;
     background-color: var(--tertiaire-color);
     padding: 2em 1.5em;
@@ -356,7 +356,7 @@ main {
     text-align: right;
 }
 .rang-img {
-    width: 3em;
+    width: 2.5em;
     margin: auto 0vw 0vw 1vw;
 }
 .fonction {

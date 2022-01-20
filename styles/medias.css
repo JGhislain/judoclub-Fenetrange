@@ -266,6 +266,61 @@ main {
     padding: 5vh 2em;
     background-color: var(--tertiaire-color);
 }
+.trieuse {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+.trier {
+    font-size: 1.125em;
+    font-weight: bold;
+    background-color: transparent;
+    border: 0;
+    margin: 2vh 0vw;
+    height: 3vh;
+}
+.chevron {
+    padding-left: 15px;
+    color: #000;
+}
+.tri-categorie {
+    height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -10000px;
+    width: 1px;
+}
+.trieuse:hover .tri-categorie {
+    width: 150px;
+    height: 130px;
+    position: initial;
+    overflow: visible;
+    background-color: var(--primaire-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.625em 1.875em 0 1.875em;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    border-radius: 5px;
+    list-style-type: none;
+}
+.ligne-tri {
+    border-bottom: 1px solid #FFF;
+    width: 100%;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+}
+.tri-bouton {
+    color: #FFF;
+    cursor: pointer;
+    padding: 0 1em;
+    width: auto;
+    display: block;
+}
 .liste img {
     height: 350px;
     width: 350px;

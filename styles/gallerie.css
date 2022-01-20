@@ -10,20 +10,25 @@
     0% {
       transform: rotate(0deg);
     }
-    20% {
-        transform: rotate(5deg);
+    100% {
+      transform: rotate(360deg);
     }
-    40% {
-        transform: rotate(-5deg);
+}
+@keyframes upscale-link {
+    0% {
+        transform: scale(0, 0);
     }
-    60% {
-        transform: rotate(5deg);
+    25% {
+        transform: scale(1.3, 1.3);
     }
-    80% {
-        transform: rotate(-5deg);
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    75% {
+        transform: scale(1.3, 1.3);
     }
     100% {
-      transform: rotate(0deg);
+        transform: scale(1.5, 1.5);
     }
 }
 @keyframes transition {
@@ -36,6 +41,9 @@
 }
 @keyframes loader {
     0% {
+        opacity: 0;
+    }
+    50% {
         opacity: 0;
     }
     100% {
@@ -54,10 +62,10 @@
 }
 @keyframes size {
     0% {
-        height: 490px;
+        height: 330px;
     }
     100% {
-        height: 670px;
+        height: 530px;
     }
 }
 @keyframes nav-box {
@@ -239,54 +247,81 @@ main {
     font-size: 2em;
     padding: 8vh 0vw 3vh 2vw;
 }
-.liste {
+.liste-media {
     animation: defilement 400ms both;
     display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 5vh;
-    padding: 5vh 2vw;
-    border-radius: 70px 0px 70px 0px;
+    padding: 5vh 0;
+}
+.article-saison {
+    width: 21%;
+    min-width: 320px;
+    height: 330px;
     background-color: var(--tertiaire-color);
+    padding: 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 70px 0px 70px 0px;
+    margin: 0em 2em 4em 2em;
 }
-.link-media-saison {
-    width: 280px;
-    height: 32vh;
-    padding: 1.2em 0 0 0;
-    text-decoration: none;
-    color: var(--primaire-color);
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-.icone-saison {
-    font-size: 7em;
-}
-.link-media {
-    width: 280px;
-    height: 32vh;
-    padding: 1.2em 0 0 0;
-    text-decoration: none;
-    color: var(--secondaire-color);
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-.icone {
-    color: var(--secondaire-color);
-    font-size: 7em;
-}
-.link-media-saison:hover {
-    animation: spinner-article 450ms ease-in-out;
+.article-saison:hover {
+    animation: size 450ms ease-in-out;
     box-shadow: inset 0em 0em 5em 0em var(--quaternaire-color);
     opacity: 0.9;
     border-radius: 70px 0px 70px 0px;
+    height: 530px;
 }
-.link-media:hover {
+.icone-saison {
+    font-size: 10em;
+    color: var(--secondaire-color);
+    filter: opacity(0.7);
+}
+.article-saison:hover .icone-saison {
     animation: spinner-article 450ms ease-in-out;
-    box-shadow: inset 0em 0em 5em 0em var(--primaire-color);
-    opacity: 0.9;
-    border-radius: 70px 0px 70px 0px;
+}
+.titre-saison {
+    font-size: 2em;
+    color: var(--primaire-color);
+    font-weight: bold;
+    text-align: center;
+}
+.liste-album {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -10000px;
+    width: 1px;
+}
+.article-saison:hover .liste-album {
+    animation: loader 450ms ease-in-out;
+    height: auto;
+    width: auto;
+    overflow: initial;
+    position: initial;
+}
+.album {
+    margin-bottom: 1vh;
+    filter: opacity(0.7);
+}
+.album:hover {
+    transform: scale(1.4, 1.4);
+    filter: opacity(1);
+}
+.link-media-saison {
+    text-decoration: none;
+    color: var(--secondaire-color);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.link-media-saison:hover {
+    color: var(--primaire-color);
 }
 footer {
     background-color: var(--tertiaire-color);

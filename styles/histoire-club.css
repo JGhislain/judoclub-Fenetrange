@@ -264,8 +264,8 @@ main {
     margin: 3vh 0;
 }
 .image-titre {
-    width: 6vw;
-    margin: 0 2vw;
+    width: 13vw;
+    margin: 0 2vw 0 0;
 }
 .titre-histoire {
     color: var(--primaire-color);
