@@ -56,7 +56,7 @@
 .trier:hover .chevron {
     position: absolute;
     transform: translateX(11em) translateY(1vh) rotate(180deg);
-    transition: transform 450ms ease 250ms;
+    transition: transform 350ms ease 250ms;
     color: #FFF;
     font-size: 1.2em;
 }
@@ -69,7 +69,7 @@
     width: 1px;
 }
 .trier:hover .tri-categorie {
-    animation: transition-tri-X 350ms linear;
+    animation: transition-tri-X 250ms linear;
     width: 150px;
     height: auto;
     position: initial;
