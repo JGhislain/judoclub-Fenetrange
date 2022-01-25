@@ -42,7 +42,7 @@
     width: 100%;
 }
 .anim-in {
-    animation: table-anim 550ms ease-in-out;
+    animation: table-anim 450ms cubic-bezier(0.175, 0.385, 0.12, 1.275);
 }
 .table-hidden {
     height: 1px;

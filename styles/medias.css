@@ -15,6 +15,16 @@
         transform: scale(1, 1);
     }
 }
+@keyframes transition-tri-X {
+    0% {
+        transform: translateX(-10vw) rotate(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
 .liste {
     animation: defilement 400ms both;
     display: flex;
@@ -32,16 +42,23 @@
     padding-bottom: 20px;
 }
 .trier {
+    display: flex;
+    align-self: start;
     font-size: 1.125em;
     font-weight: bold;
-    background-color: transparent;
-    border: 0;
-    margin: 2vh 0vw;
-    height: 3vh;
+    margin: 0 5vw;
 }
 .chevron {
     padding-left: 15px;
     color: #000;
+    font-size: 1.2em;
+}
+.trier:hover .chevron {
+    position: absolute;
+    transform: translateX(11em) translateY(1vh) rotate(180deg);
+    transition: transform 450ms ease 250ms;
+    color: #FFF;
+    font-size: 1.2em;
 }
 .tri-categorie {
     height: 1px;
@@ -51,19 +68,18 @@
     top: -10000px;
     width: 1px;
 }
-.trieuse:hover .tri-categorie {
+.trier:hover .tri-categorie {
+    animation: transition-tri-X 350ms linear;
     width: 150px;
-    height: 130px;
+    height: auto;
     position: initial;
     overflow: visible;
     background-color: var(--primaire-color);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    margin: 0.625em 1.875em 0 1.875em;
-    padding-left: 0.625em;
-    padding-right: 0.625em;
+    margin: 0 1.875em 0 1.875em;
+    padding: 1em 0.625em 1.5em 0.625em;
     border-radius: 5px;
     list-style-type: none;
 }
@@ -169,7 +185,7 @@
     right: 0%;
     margin-top: 80px;
     transition: opacity 300ms;
-    opacity: 0.5;
+    opacity: 0.7;
     cursor: pointer;
     color: var(--quaternaire-color);
     background-color: var(--tertiaire-color);
@@ -182,7 +198,7 @@
     top: 0px;
     left: 0%;
     margin-top: 80px;
-    opacity: 0.5;
+    opacity: 0.7;
     transition: opacity 300ms;
     cursor: pointer;
     color: var(--quaternaire-color);
@@ -195,12 +211,12 @@
     position: fixed;
     top: 0px;
     right: 0px;
-    opacity: 0.5;
+    opacity: 0.7;
     cursor: pointer;
     transition: opacity 300ms;
     z-index: 11;
-    color: var(--quaternaire-color);
-    background-color: var(--font-color);
+    color: var(--primaire-color);
+    background-color: var(--quaternaire-color);
 }
 .lightbox__preview:hover,
 .lightbox__next:hover,
