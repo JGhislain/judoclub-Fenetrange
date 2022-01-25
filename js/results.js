@@ -23,7 +23,7 @@ let afficheTableau = function() {
                     nav.classList.remove('nav-actif')
                 }
             })
-            tag.classList.toggle('nav-actif')
+            tag.classList.add('nav-actif')
 // ---- Boucle des tableaux pour vérifier lequel afficher selon le data-name -------------
             tableaux.forEach(tableau => {
                 if (tag.dataset.name == tableau.dataset.name) {
