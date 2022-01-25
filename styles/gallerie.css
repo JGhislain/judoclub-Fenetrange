@@ -48,8 +48,7 @@
 .article-saison:hover {
     animation: size-gallerie 450ms ease-in-out;
     box-shadow: inset 0em 0em 5em 0em var(--quaternaire-color);
-    opacity: 0.9;
-    border-radius: 70px 0px 70px 0px;
+    filter: opacity(0.9);
     height: 530px;
 }
 .icone-saison {
@@ -67,7 +66,7 @@
     text-align: center;
 }
 .liste-album {
-    list-style-type: none;
+    list-style-type: ' ';
     padding: 0;
     text-align: center;
     height: 1px;
