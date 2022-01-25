@@ -1,3 +1,11 @@
+@keyframes table-anim {
+    0% {
+        transform: translateX(150vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 .classement {
     animation: defilement 400ms both;
     display: flex;
@@ -32,6 +40,9 @@
 }
 .tableau {
     width: 100%;
+}
+.anim-in {
+    animation: table-anim 550ms ease-in-out;
 }
 .table-hidden {
     height: 1px;
