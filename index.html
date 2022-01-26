@@ -544,14 +544,54 @@
         <div class="liens-contact">
             <ul class="liste-contact">
                 <li class="contact">
-                    <a href="html/contact.html" class="contact-form"><i class="fas fa-envelope-open-text icone-contact"></i>Nous contacter</a>
+                    <a href="html/contact.html" class="contact-form modal-contact"><i class="fas fa-envelope-open-text icone-contact"></i>Nous contacter</a>
                 </li>
                 <li class="contact">
-                    <a href="" class="contact-form"><i class="fas fa-hands-helping icone-partenaire"></i>Mentions légales</a>
+                    <a href="" class="contact-form modal-legal"><i class="fas fa-hands-helping icone-partenaire"></i>Mentions légales</a>
                 </li>
             </ul>
         </div>
     </footer>
+    <div class="content-modal-contact">
+        <div class="modal-body">
+            <button class="modal__close"><i class="fas fa-times"></i></button>
+            <h4 class="titre-contact-modal">CONTACTER LE JUDO-CLUB</h4>
+            <p class="contact-me">FORMULAIRE DE CONTACT</p>
+            <form name="contact" id="formulaire" action="photographe.html" method="post">
+                <div class="formData">
+                    <label for="first">Prénom</label><br>
+                    <input class="text-control" type="text" id="first" name="first" placeholder="Votre prénom" aria-required='true'/><br>
+                    <span id="first-validation"></span>
+                </div>
+                <div class="formData">
+                    <label for="last">Nom</label><br>
+                    <input class="text-control" type="text" id="last" name="last" placeholder="Votre nom" aria-required='true'/><br>
+                    <span id="last-validation"></span>
+                </div>
+                <div class="formData">
+                    <label for="email">Email</label><br>
+                    <input class="text-control" type="email" id="email" name="email" placeholder="Votre Email" aria-required='true'/><br>
+                    <span id="email-validation"></span>
+                </div>
+                <div class="formData">
+                    <label for="message">Votre message</label><br>
+                    <textarea class="text-control" id="message" name="message" placeholder="Saisissez votre message" aria-required='true'></textarea><br>
+                    <span id="message-validation"></span>
+                </div>
+                <div class="submit">
+                    <input class="btn-submit" type="submit" id="btn-submit" value="Envoyer"/><br>
+                    <span id="error-validation"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="content-modal-legal">
+        <div class="modal-body">
+            <button class="modal__close__legal"><i class="fas fa-times"></i></button>
+            <h4 class="titre-legal-modal">Mentions Légales</h4>
+            <p class="legal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius quidem, non, ullam, nesciunt eum consequatur velit accusantium fugiat neque a quo temporibus rem. Rem molestiae nihil quidem! Eos, iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ipsam explicabo. At accusantium voluptas, atque sit ipsum iste error quod animi itaque quia nulla culpa est reiciendis, voluptates quibusdam blanditiis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore commodi ipsam error, explicabo veritatis deleniti reprehenderit, recusandae voluptas suscipit repellat quod minus! Aut reprehenderit labore molestias, ipsam debitis quia explicabo?</p>
+        </div>
+    </div>
     <script src="js/app.js"></script>
 </body>
 

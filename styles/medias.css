@@ -162,6 +162,7 @@
     height: 100%;
 }
 .lightbox.show {
+    animation: open-modal 450ms ease-in-out;
     display: initial;
 }
 .lightbox {
