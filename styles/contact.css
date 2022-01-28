@@ -96,3 +96,5 @@ textarea:focus {
 .btn-submit:focus {
     border: 2px solid var(--border-acces-color);
 }
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 768px){}

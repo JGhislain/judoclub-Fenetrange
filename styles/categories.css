@@ -101,10 +101,12 @@ div.cat-poids {
 .vide-bas {
     border-bottom: 1px solid var(--tertiaire-color) !important;
 }
-  /* DivTable.com */
-  .divTable{ display: table; }
-  .divTableRow { display: table-row; }
-  .divTableHeading { display: table-header-group;}
-  .divTableCell, .divTableHead { display: table-cell;}
-  .divTableHeading { display: table-header-group;}
-  .divTableBody { display: table-row-group;}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableBody { display: table-row-group;}
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 768px){}

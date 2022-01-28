@@ -93,3 +93,5 @@ div.petits-tigres {
 .divTableCell, .divTableHead { display: table-cell;}
 .divTableHeading { display: table-header-group;}
 .divTableBody { display: table-row-group;}
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 768px){}

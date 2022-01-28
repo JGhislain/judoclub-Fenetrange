@@ -17,16 +17,16 @@
 .fc-event {
 	background: #fff !important;
 	color: #000 !important;
-	}
+}
 	
 /* for vertical events */
 	
 .fc-event-bg {
 	display: none !important;
-	}
+}
 	
 .fc-event .ui-resizable-handle {
 	display: none !important;
-	}
-	
-	
+}
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 768px){}

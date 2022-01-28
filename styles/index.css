@@ -39,7 +39,7 @@
 .article:hover {
     animation: size-activite 450ms both;
     box-shadow: inset 0em 0em 3em 0em var(--quaternaire-color);
-    opacity: 0.9;
+    filter: opacity(0.9);
 }
 .img-activite {
     width: 100%;
@@ -103,4 +103,182 @@ strong {
 }
 .article:hover .detail-prix {
     animation: loader-activite 400ms ease-in-out;
+}
+@media screen and (max-width: 1024px){
+    .activites {
+        animation: defilement 400ms both;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 5vh 0;
+    }
+    .article {
+        width: 20%;
+        min-width: 340px;
+        height: 490px;
+        background-color: var(--tertiaire-color);
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        border-radius: 70px 0px 70px 0px;
+        margin: 0em 2em 4em 2em;
+    }
+    .article:hover {
+        animation: size-activite 450ms both;
+        box-shadow: inset 0em 0em 3em 0em var(--quaternaire-color);
+        filter: opacity(0.9);
+    }
+    .img-activite {
+        width: 100%;
+        object-fit: cover;
+        height: 220px;
+        border-radius: 70px 0px 70px 0px;
+    }
+    .titre-article {
+        font-size: 1.6em;
+        color: var(--primaire-color);
+        font-weight: bold;
+        text-align: center;
+        margin: auto;
+        padding: 3% 7%;
+    }
+    .description-activite {
+        height: 1px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: -10000px;
+        width: 1px;
+    }
+    .article:hover .description-activite {
+        animation: loader-activite 400ms linear;
+        margin: auto;
+        padding: 10px 0%;
+        height: 190px;
+        text-align: justify;
+        font-size: 1.1em;
+        position: initial;
+        overflow: initial;
+        width: auto;
+    }
+    .heure-activite {
+        color: var(--primaire-color);
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: 0;
+        padding: 4% 0;
+    }
+    .article:hover .heure-activite {
+        animation: loader-activite 400ms ease-in-out;
+    }
+    .prix {
+        margin: auto;
+        padding: 4% 0 1% 0;
+        font-size: 1.1em;
+    }
+    .article:hover .prix {
+        animation: loader-activite 400ms ease-in-out;
+    }
+    strong {
+        color: var(--primaire-color);
+    }
+    .detail-prix {
+        margin: 0;
+        font-size: 1em;
+        padding-top: 5px;
+        filter: opacity(0.6);
+    }
+    .article:hover .detail-prix {
+        animation: loader-activite 400ms ease-in-out;
+    }
+}
+@media screen and (max-width: 768px){
+    .activites {
+        animation: defilement 400ms both;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 5vh 0;
+    }
+    .article {
+        width: 20%;
+        min-width: 340px;
+        height: 490px;
+        background-color: var(--tertiaire-color);
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        border-radius: 70px 0px 70px 0px;
+        margin: 0em 2em 4em 2em;
+    }
+    .article:hover {
+        animation: size-activite 450ms both;
+        box-shadow: inset 0em 0em 3em 0em var(--quaternaire-color);
+        filter: opacity(0.9);
+    }
+    .img-activite {
+        width: 100%;
+        object-fit: cover;
+        height: 220px;
+        border-radius: 70px 0px 70px 0px;
+    }
+    .titre-article {
+        font-size: 1.6em;
+        color: var(--primaire-color);
+        font-weight: bold;
+        text-align: center;
+        margin: auto;
+        padding: 3% 7%;
+    }
+    .description-activite {
+        height: 1px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: -10000px;
+        width: 1px;
+    }
+    .article:hover .description-activite {
+        animation: loader-activite 400ms linear;
+        margin: auto;
+        padding: 10px 0%;
+        height: 190px;
+        text-align: justify;
+        font-size: 1.1em;
+        position: initial;
+        overflow: initial;
+        width: auto;
+    }
+    .heure-activite {
+        color: var(--primaire-color);
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: 0;
+        padding: 4% 0;
+    }
+    .article:hover .heure-activite {
+        animation: loader-activite 400ms ease-in-out;
+    }
+    .prix {
+        margin: auto;
+        padding: 4% 0 1% 0;
+        font-size: 1.1em;
+    }
+    .article:hover .prix {
+        animation: loader-activite 400ms ease-in-out;
+    }
+    strong {
+        color: var(--primaire-color);
+    }
+    .detail-prix {
+        margin: 0;
+        font-size: 1em;
+        padding-top: 5px;
+        filter: opacity(0.6);
+    }
+    .article:hover .detail-prix {
+        animation: loader-activite 400ms ease-in-out;
+    }
 }

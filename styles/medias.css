@@ -227,19 +227,16 @@
 .lightbox__container img {
     max-width: 100%;
     height: auto;
-    animation: lightboxIn 500ms;
 }
 .lightbox-video {
     display: none;
     min-height: inherit;
-    animation: lightboxIn 500ms;
 }
 .lightbox-link {
     display: none;
     max-width: 100%;
     height: auto;
     text-align: center;
-    animation: lightboxIn 500ms;
 }
 .lightbox-video.show {
     display: initial;
@@ -252,3 +249,5 @@
     margin-right: 50px;
     min-height: 100vh;
 }
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 768px){}

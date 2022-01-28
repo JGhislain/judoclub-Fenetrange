@@ -51,3 +51,5 @@
     text-align: justify;
     filter: opacity(0.8);
 }
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 768px){}
