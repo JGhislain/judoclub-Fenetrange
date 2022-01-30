@@ -1086,18 +1086,70 @@ textarea:focus {
         right: 5px;
         margin: 0;
     }
-    nav {
+    .burger {
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        position: relative;
+        right: 38vw;
+        bottom: 55px;
+    }
+    .icone-burger {
         width: 100%;
-        display: none; /* Display: flex*/
+        height: 4px;
+        background-color: var(--primaire-color);
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 500ms ease-in-out;
+    }
+    .icone-burger::before, .icone-burger::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: var(--primaire-color);
+        transition: transform 500ms ease-in-out;
+    }
+    .icone-burger::before {
+        transform: translateY(-10px);
+    }
+    .icone-burger::after {
+        transform: translateY(10px);
+    }
+    .burger.nav-actif .icone-burger {
+        transform: rotateZ(90deg);
+    }
+    .burger.nav-actif .icone-burger::before {
+        transform: rotateZ(90deg);
+    }
+    .burger.nav-actif .icone-burger::after {
+        transform: rotateZ(90deg);
+    }
+    nav {
+        height: 1px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: -10000px;
+        width: 1px;
+    }
+    .nav-burger {
+        width: 50%;
+        display: flex;
         justify-content: start;
         align-items: flex-start;
         flex-direction: column;
-        position: fixed;
+        position: absolute;
+        top: 195px;
+        left: 0px;
         margin: 10vh 0;
         z-index: 5;
         background: var(--secondaire-color);
         height: auto;
         padding: 2vh 5vw;
+        animation: defilement 500ms ease-in-out;
     }
     .naviguation {
         text-decoration: none;
@@ -1105,7 +1157,7 @@ textarea:focus {
         font-weight: bold;
         border: 2px solid var(--tertiaire-color);
         border-radius: 20px 0px 20px 0px;
-        margin: auto 0.3vw;
+        margin: 1vh 0.3vw;
         text-align: center;
         cursor: pointer;
         padding: 0.5vh 0;
@@ -1148,16 +1200,16 @@ textarea:focus {
     }
     .naviguation:hover .nav-rapide {
         animation: nav-box-port 450ms ease-in-out;
-        height: auto;
-        width: auto;
-        position: initial;
-        overflow: visible;
+        height: 1px;
+        width: 1px;
+        position: absolute;
+        overflow: hidden;
     }
     .nav-rapide:hover {
-        height: auto;
-        width: auto;
-        position: initial;
-        overflow: visible;
+        height: 1px;
+        width: 1px;
+        position: absolute;
+        overflow: hidden;
     }
     .lien-rapide {
         text-decoration: none;
@@ -1240,14 +1292,14 @@ textarea:focus {
         margin: 0 5%;
     }
     .section-principal {
-        padding-bottom: 5vh;
+        padding-bottom: 2vh;
     }
     .titre-section {
         animation: transition 200ms both;
         color: var(--tertiaire-color);
         margin: auto;
-        font-size: 2em;
-        padding: 8vh 0vw 3vh 2vw;
+        font-size: 1.8em;
+        padding: 0vh 0vw 0vh 2vw;
     }
     .section-titre-bis {
         animation: transition 200ms both;
@@ -1308,7 +1360,7 @@ textarea:focus {
         cursor: pointer;
     }
     .logo-lien-footer {
-        height: 8vh;
+        height: 7vh;
         border-radius: 10px 0px 10px 0px;
         background-color: transparent;
     }
@@ -1317,7 +1369,7 @@ textarea:focus {
         transform: scale(1.2, 1.2);
     }
     .moselle {
-        height: 8vh;
+        height: 7vh;
         border-radius: 10px 0px 10px 0px;
         border: 1px inset #019838;
         background-color: transparent;
@@ -1333,7 +1385,7 @@ textarea:focus {
     }
     .liste-contact {
         color: var(--secondaire-color);
-        font-size: 2em;
+        font-size: 1.8em;
         list-style-type: disclosure-closed;
         padding: 0;
         margin: 0;
@@ -1349,7 +1401,7 @@ textarea:focus {
         color: var(--primaire-color);
     }
     .icone-contact {
-        padding: 0 0.5em;
+        padding: 0 0.3em;
     }
     .texte-contact {
         display: none;

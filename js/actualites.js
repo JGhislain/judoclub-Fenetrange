@@ -21,3 +21,25 @@ function closeLegal () {
         modalDisplayLegal.classList.remove('modal-show')
     })
 }
+
+//--------------------------------------------------------------------------------------//
+//                                                                                      //
+//                        Fonction Menu Burger Portable Display                         //
+//                                                                                      //
+//--------------------------------------------------------------------------------------//
+
+//--------------------------------------------------------------------------------------//
+//                           Appel du DOM pour le menu Burger                           //
+//--------------------------------------------------------------------------------------//
+
+const burger = document.querySelector('.burger')
+const navBurger = document.querySelector('nav')
+
+//--------------------------------------------------------------------------------------//
+//                           Fonction d'écoute du menu burger                           //
+//--------------------------------------------------------------------------------------//
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('nav-actif')
+    navBurger.classList.toggle('nav-burger')
+})
