@@ -168,7 +168,6 @@ header {
     height: 32.5vh;
 }
 .logo-jcf {
-    margin-left: 5vw;
     height: 71%;
     width: 10%;
 }
@@ -177,7 +176,6 @@ header {
     align-self: center;
     justify-content: center;
     font-family: 'j.d', 'sans-serif';
-    width: 50%;
     font-size: 8vh;
     letter-spacing: 0.3em;
     text-align: center;
@@ -186,7 +184,6 @@ header {
     color: var(--tertiaire-color);
 }
 .logo-ffjda {
-    margin-right: 3vw;
     height: 60%;
     width: 10%;
 }
@@ -612,7 +609,6 @@ textarea:focus {
         height: 32.5vh;
     }
     .logo-jcf {
-        margin-left: 5vw;
         height: 50%;
         width: 10%;
     }
@@ -621,7 +617,6 @@ textarea:focus {
         align-self: center;
         justify-content: center;
         font-family: 'j.d', 'sans-serif';
-        width: 40%;
         font-size: 5vh;
         letter-spacing: 0.3em;
         text-align: center;
@@ -630,7 +625,6 @@ textarea:focus {
         color: var(--tertiaire-color);
     }
     .logo-ffjda {
-        margin-right: 3vw;
         height: 45%;
         width: 10%;
     }
@@ -1167,6 +1161,7 @@ textarea:focus {
     .naviguation:hover {
         background-color: var(--primaire-color);
         border: 2px solid var(--quaternaire-color);
+        margin: 1vh 0;
     }
     .page-active {
         background-color: var(--primaire-color);
@@ -1435,7 +1430,7 @@ textarea:focus {
     .modal-body {
         margin: 5% auto;
         width: 100%;
-        max-width: 500px;
+        max-width: 350px;
         background: var(--tertiaire-color);
         overflow: hidden;
         position: relative;
@@ -1444,7 +1439,7 @@ textarea:focus {
     }
     .titre-contact-modal {
         color: var(--primaire-color);
-        font-size: 2em;
+        font-size: 1.5em;
         text-align: center;
         margin: 1vh 0 3vh 0;
     }
@@ -1466,7 +1461,7 @@ textarea:focus {
     }
     .modal__close {
         position: relative;
-        left: 455px;
+        left: 305px;
         font-size: 2.5em;
         background: var(--quaternaire-color);
         border: none;
@@ -1477,7 +1472,7 @@ textarea:focus {
     }
     .modal__close__legal {
         position: relative;
-        left: 455px;
+        left: 305px;
         font-size: 2.5em;
         background: var(--quaternaire-color);
         border: none;
