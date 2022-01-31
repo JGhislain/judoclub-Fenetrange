@@ -1385,6 +1385,7 @@ textarea:focus {
         list-style-type: disclosure-closed;
         padding: 0;
         margin: 0;
+        list-style-position: inside;
     }
     .contact {
         padding-bottom: 2vh;
