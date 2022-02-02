@@ -193,7 +193,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4vh;
+    overflow: initial;
+    position: initial;
 }
 .naviguation {
     text-decoration: none;
@@ -630,12 +631,13 @@ textarea:focus {
         width: 10%;
     }
     nav {
-        margin: 1vh 0;
+        margin: auto 0;
         width: 90%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        height: 4vh;
+        align-items: flex-start;
+        overflow: initial;
+        position: initial;
     }
     .naviguation {
         text-decoration: none;
@@ -814,10 +816,8 @@ textarea:focus {
     }
     footer {
         background-color: var(--tertiaire-color);
-        width: 100%;
         display: flex;
         justify-content: space-around;
-        align-items: center;
         padding: 1vh 0;
     }
     .liens-footer {
@@ -888,6 +888,9 @@ textarea:focus {
     }
     .icone-contact {
         padding: 0 0.5em;
+    }
+    .texte-contact {
+        display: initial;
     }
     .content-modal-contact {
         display: none;
