@@ -1160,7 +1160,6 @@ textarea:focus {
         cursor: pointer;
         padding: 0.5vh 0;
         z-index: 10;
-        transform: rotateZ(0);
     }
     .naviguation:hover {
         background-color: var(--primaire-color);
