@@ -190,6 +190,7 @@ header {
 nav {
     margin: 3vh 0;
     width: 95%;
+    height: 4vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -631,8 +632,8 @@ textarea:focus {
         width: 10%;
     }
     nav {
-        margin: auto 0;
-        width: 90%;
+        margin: auto auto;
+        height: 3vh;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -650,7 +651,6 @@ textarea:focus {
         cursor: pointer;
         padding: 0.5vh 0;
         z-index: 10;
-        transform: rotateZ(45deg);
     }
     .naviguation:hover {
         background-color: var(--primaire-color);
@@ -668,7 +668,7 @@ textarea:focus {
         text-decoration: none;
         color: var(--tertiaire-color);
         padding: 0 0.5vw;
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .naviguation:hover .lien-nav {
         color: var(--quaternaire-color);
